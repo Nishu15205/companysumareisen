@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Tourism Logo">
+        </div>
+        <nav>
+          <style>
+            .sidebar {
+             height: 100%;
+             width: 0;
+             position: fixed;
+             z-index: 1;
+             top: 0;
+             left: 0;
+             background-color: #111;
+             overflow-x: hidden;
+             transition: 0.5s;
+             padding-top: 60px;
+           }
+           
+           .sidebar a {
+             padding: 8px 8px 8px 32px;
+             text-decoration: none;
+             font-size: 25px;
+             color: #818181;
+             display: block;
+             transition: 0.3s;
+           }
+           
+           .sidebar a:hover {
+             color: #f1f1f1;
+           }
+           
+           .sidebar .closebtn {
+             position: absolute;
+             top: 0;
+             right: 25px;
+             font-size: 36px;
+             margin-left: 50px;
+           }
+           
+           .openbtn {
+             font-size: 20px;
+             cursor: pointer;
+             background-color: #111;
+             color: white;
+             
+             border: none;
+           }
+           
+           .openbtn:hover {
+             background-color: #444;
+           }
+           
+           #main {
+             transition: margin-left .5s;
+             
+           }
+           
+           /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+           @media screen and (max-height: 450px) {
+             .sidebar {padding-top: 15px;}
+             .sidebar a {font-size: 18px;}
+           }
+           </style>
+           </head>
+           <body>
+           
+           <div id="mySidebar" class="sidebar">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+             
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="package.html">Packages</a></li>
+              <li><a href="destination.html">Destinations</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="book.html" class="book-now">Book Now</a></li>
+          
+           </div>
+           
+           <div id="main">
+             <button class="openbtn" onclick="openNav()">☰</button>  
+                 </div>
+           
+           <script>
+           function openNav() {
+             document.getElementById("mySidebar").style.width = "250px";
+             document.getElementById("main").style.marginLeft = "25px";
+           }
+           
+           function closeNav() {
+             document.getElementById("mySidebar").style.width = "0";
+             document.getElementById("main").style.marginLeft= "0";
+           }
+           </script>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="book.html" class="book-now">Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  
+              </li>
+            </ul>
+            
+        </nav>
+    </div>
+</header>
+<style>body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 50px; /* Adjust based on your logo size */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0c040; /* Highlight color */
+}
+
+.book-now {
+  background-color: #f0c040;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.book-now:hover {
+  background-color: #e0b830;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      padding: 10px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+
+</style>
+<script>document.addEventListener('DOMContentLoaded', function () {
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('active');
+});
+});</script>
+                  
+                  
+               </ul>
+    </b>
+    
+   </header>
+    <style> * {
+        box-sizing: border-box;
+      }
+      
+      .row {
+        display: -ms-flexbox; /* IE 10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE 10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      
+      /* Create two equal columns that sits next to each other */
+      .column {
+        -ms-flex: 50%; /* IE 10 */
+        flex: 50%;
+        padding: 0 4px;
+      }
+      
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+      .row,iframe {
+  float: right;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+#emailForm {
+  float: right;
+  width: 100%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    button[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button[type=submit]:hover {
+      background-color: #28d730;
+    }
+    
+    #emailForm {
+      border-radius: 5px;
+      background-color: #FEB941;
+      padding: 20px;
+    }
+    @media screen and (max-width: 600px) {
+  #emailForm{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #email{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #emailForm{
+    width: 20%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #email,button[type=submit]{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+      </style>
+      <img src="ayurvedaa.png" style="width: 100%;">
+    <h1>AYURVEDA TOUR KERALA</h1>
+    <div class="row" style="width: 350px;height:100%;"> 
+      <div class="column">
+        <img src="a1.jpg" style="width:100%">
+        <img src="a2.jpg" style="width:100%">
+        <img src="a3.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="a4.jpg" style="width:100%">
+        <img src="a5.png" style="width:100%;">
+        <img src="a6.jpg" style="width:100%">
+       
+      </div>  
+     
+    </div>
+    <div class="para">
+    <p>An Ayurveda tour in Kerala offers a holistic wellness experience combining traditional healing practices with the serene beauty of the region. Nestled in the lush landscapes of southern India, these tours typically involve stays at specialized Ayurvedic resorts or wellness centers, where visitors undergo personalized treatments. These treatments include herbal massages, detoxification therapies, yoga, and meditation, all aimed at restoring balance and promoting overall health. The backdrop of Kerala’s tranquil backwaters, verdant forests, and pristine beaches enhances the therapeutic experience, providing a rejuvenating escape from daily life.
+
+       <h2>Tour Schedule</h2>
+
+    <b>Day 01 Arrive Trivandrum</b><br>
+    Trivandrum / Kovalam 20Kms / 30Mins
+    <br>
+    Upon arrival, after clearing immigration and custom, you will be meet and drive to Kovalam Upon arrival check in to your hotel (Check-in at 1400hrs)
+    <br>
+    Overnight at hotel
+    <br>
+    <b>Day 02 – 07 Kovalam (Ayurveda treatments)</b><br>
+    Full day free for Ayurveda Treatments<br>
+    REJUVENATION THERAPY (RASAYANA CHIKILSA)<br>
+    This treatment includes body massage with hand and foot by two masseurs with medicated oil and cream, internal rejuvenative medicines and medicated stem bath. This therapy is for 90 minutes to 2 hours per day for 8 days. This therapy is to rejuvenate mind body and soul, to tone up skin, to strengthen all systems so as to achieve ideal health and longevity.
+    <br>
+    
+    Full day free for Ayurveda Treatments
+    <br>
+    <iframe style="width: 350px;height: 250px;" src="https://www.google.com/maps/embed?pb=!1m30!1m8!1m3!1d126284.42150645037!2d76.943102!3d8.46158!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!3m2!1d8.5241391!2d76.9366376!4m5!1s0x3b05a5090a19ec65%3A0xb67f315bc0b762ac!2sKovalam%2C%20Kerala!3m2!1d8.3988128!2d76.9820149!4m5!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!3m2!1d8.5241391!2d76.9366376!5e0!3m2!1sen!2sin!4v1722167831568!5m2!1sen!2sin"  ></iframe>
+   
+    The Ayurveda package includes the following services.<br>
+    • Accommodation as per the category of booking<br>
+    • Daily Ayurveda Rejuvenation treatments<br>
+    • Ayurveda vegetarian full board meal<br>
+    • Initial, daily and final consultation by the doctor<br>
+    • Free medicines during the treatment period<br>
+    • Composition of an individual Ayurveda diet menu<br>
+    <br>
+    The following services provided complimentary along with package booking.<br>
+    • Daily one session of Yoga and Meditation<br>
+    • Cultural programmes (visual or music)<br>
+    • Traditional welcome upon arrival<br>
+    • Language interpreters<br>
+    <br>
+    Overnight at hotel<br>
+    
+    
+ 
+  <b>Day 08 Kovalam /Trivandrum (16Kms / 30 min approx)</b><br>
+  Leave Trivandrum<br>
+  <br>
+  Morning drive to Trivandrum International airport to connect your flight back home.
+    
+   
+</p>
+</div>
+</body></div>
+<footer>
+  <style>/* styles.css */
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+        font-size: 14px;
+    }
+    .para,h1{
+      margin-left: 10px;
+    }
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo img {
+        max-width: 150px;
+    }
+    
+    .footer-links, .footer-contact, .footer-social {
+        flex: 1;
+        margin: 0 20px;
+    }
+    
+    .footer-links h3, .footer-contact h3, .footer-social h3 {
+        margin-top: 0;
+        font-size: 16px;
+    }
+    
+    .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+    
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-links ul li a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-contact a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-social a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+    }
+    </style>
+  <div class="footer-container">
+      
+      <div class="footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="index.html">Tours</a></li>
+            <li><a href="package.html">Packages</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="contact.html">Contact  Us</a></li>
+            <li><a href="book.html">Book Now</a></li>
+          </ul>
+      </div>
+      <div class="footer-contact">
+          <h3 style="text-align: center;">Contact Us</h3>
+          <p>Email: <a href="mailto:info@sumareisen.com">info@sumareisen.com</a></p>
+          <p>Phone: +49 173 561 2690</p>
+          <p>Address:  Goldregenweg22, 51061Köln, Germany</p>
+      </div>
+      <div class="footer-social">
+          <h3 style="margin-left: 30px;">Follow Us</h3>
+          <a href="#" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2019 Tourism Website. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

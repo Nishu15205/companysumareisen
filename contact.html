@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="image1" href="image1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="video.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Explore the World</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Tourism Logo">
+            </div>
+            <nav>
+              <style>
+                .sidebar {
+                 height: 100%;
+                 width: 0;
+                 position: fixed;
+                 z-index: 1;
+                 top: 0;
+                 left: 0;
+                 background-color: #111;
+                 overflow-x: hidden;
+                 transition: 0.5s;
+                 padding-top: 60px;
+               }
+               
+               .sidebar a {
+                 padding: 8px 8px 8px 32px;
+                 text-decoration: none;
+                 font-size: 25px;
+                 color: #818181;
+                 display: block;
+                 transition: 0.3s;
+               }
+               
+               .sidebar a:hover {
+                 color: #f1f1f1;
+               }
+               
+               .sidebar .closebtn {
+                 position: absolute;
+                 top: 0;
+                 right: 25px;
+                 font-size: 36px;
+                 margin-left: 50px;
+               }
+               
+               .openbtn {
+                 font-size: 20px;
+                 cursor: pointer;
+                 background-color: #111;
+                 color: white;
+                 
+                 border: none;
+               }
+               
+               .openbtn:hover {
+                 background-color: #444;
+               }
+               
+               #main {
+                 transition: margin-left .5s;
+                 
+               }
+               
+               /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+               @media screen and (max-height: 450px) {
+                 .sidebar {padding-top: 15px;}
+                 .sidebar a {font-size: 18px;}
+               }
+               </style>
+               </head>
+               <body>
+               
+               <div id="mySidebar" class="sidebar">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                 
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="About.html">About</a></li>
+                 <li><a href="package.html">Packages</a></li>
+                 <li><a href="destination.html">Destinations</a></li>
+                 <li><a href="contact.html">Contact Us</a></li>
+                 <li><a href="book.html" class="book-now">Book Now</a></li>
+               </div>
+               
+               <div id="main">
+                 <button class="openbtn" onclick="openNav()">☰</button>  
+                     </div>
+               
+               <script>
+               function openNav() {
+                 document.getElementById("mySidebar").style.width = "250px";
+                 document.getElementById("main").style.marginLeft = "25px";
+               }
+               
+               function closeNav() {
+                 document.getElementById("mySidebar").style.width = "0";
+                 document.getElementById("main").style.marginLeft= "0";
+               }
+               </script>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="package.html">Packages</a></li>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="book.html" class="book-now">Book Now</a></li>  </ul>
+            </nav>
+        </div>
+    </header>
+      
+                  </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <style>body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+  
+  header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+  }
+  
+  .logo img {
+      height: 50px; /* Adjust based on your logo size */
+  }
+  
+  nav {
+      display: flex;
+      align-items: center;
+  }
+  
+  .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+  
+  .nav-links li {
+      margin: 0 15px;
+  }
+  
+  .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+      color: #f0c040; /* Highlight color */
+  }
+  
+  .book-now {
+      background-color: #f0c040;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+  }
+  
+  .book-now:hover {
+      background-color: #e0b830;
+  }
+  
+  .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+      .nav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          background-color: #333;
+          padding: 10px;
+      }
+  
+      .nav-links.active {
+          display: flex;
+      }
+  
+      .nav-links li {
+          margin: 10px 0;
+      }
+  
+      .menu-toggle {
+          display: block;
+      }
+  }
+  
+  </style>
+  <script>document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+  
+    menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+  });</script>
+                      
+                      
+                   </ul>
+        </b>
+        
+       </header>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    
+    background-color: #f4f4f4;
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact-section h2 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info {
+    flex: 1;
+    max-width: 300px;
+}
+
+.admin-img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.contact-info h3 {
+    margin: 0;
+    color: #555;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.map-container {
+    flex: 2;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form h3 {
+    margin-top: 0;
+    color: #555;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #555;
+}
+
+</style>
+    
+    <main>
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <img src="sumaa.png" alt="Admin Image" class="admin-img">
+                    <h2>	
+                        35 Jahre
+                        Suma Reisen!
+                        </h2>
+                    
+                    <p><strong>Address:</strong> Goldregenweg 22, 51061 Köln, Germany</p>
+                    <p><strong>Email:</strong> info@sumareisen.com</p>
+                    <p><strong>Phone:</strong> + 0049 173 561 2690</p>
+                    <p><strong>Hours:</strong>Mon-Fri 9:00AM - 5:00PM</p>
+                </div>
+                <div class="map-container">
+                    <h3>Our Location</h3>
+                    <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2512.0209160017216!2d7.046593!3d50.978804000000004!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf288fc7e379a5%3A0xee5351e9be6e2765!2sGoldregenweg%2022%2C%2051061%20K%C3%B6ln%2C%20Germany!5e0!3m2!1sen!2sus!4v1722246838749!5m2!1sen!2sus" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h1>Get in Touch</h1>
+                <form id="emailForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required ><br><br>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required ><br><br>
+                    <div class="countrysel">
+                        <label for="country">Country:</label>
+                        <select id="country" name="country" style="width:200px ;">
+                          <option value="australia">Australia</option>
+                          <option value="canada">Canada</option>
+                          <option value="usa">USA</option>
+                        </select><br><br>
+                        <label for="number">Contact Number:</label>
+                        <input type="text" id="number" name="number" required ><br><br>
+                    </div>
+                    <label for="adult">Number of adults:</label>
+                        <input type="text" id="adult" name="adult" required ><br><br>
+                        <label for="childrens">Number of childrens:</label>
+                        <input type="text" id="childrens" name="childrens" required ><br><br>
+                       
+        <label for="subject">Enquiry Subject:</label>
+                        <input type="text" id="subject" name="subject" required>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+                
+                
+                <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+                <script>
+                    // Initialize EmailJS with your user ID (replace with your actual user ID)
+                    emailjs.init("L_m3hRAGzfjYp0cPS");
+                    
+                    // Handle form submission
+                    document.getElementById('emailForm').addEventListener('submit', function(event) {
+                        event.preventDefault(); // Prevent default form submission
+                        
+                        // Collect form data
+                        let form = event.target;
+                        let formData = new FormData(form);
+                        
+                        // Send email using EmailJS
+                        emailjs.send("service_8efabz6", "template_mh46i6m", {
+                            from_name: formData.get('name'),
+                            from_email: formData.get('email'),
+                            from_country: formData.get('country'),
+                            from_number: formData.get('number'),
+                            from_adult: formData.get('adult'),
+                            from_childrens: formData.get('childrens'),
+                            from_subject: formData.get('subject'),
+                            message: formData.get('message')
+                        }).then(function(response) {
+                            alert('Email sent successfully!');
+                            form.reset(); // Reset form after successful submission
+                        }, function(error) {
+                            alert('Error sending email: ' + error.text);
+                        });
+                    });
+                </script>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        function initMap() {
+           
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+        window.onload = initMap;
+    </script>
+      <footer>
+        <style>/* styles.css */
+
+          body {
+              margin: 0;
+              font-family: Arial, sans-serif;
+          }
+          
+          footer {
+              background-color: #000;
+              color: #fff;
+              padding: 40px 20px;
+              font-size: 14px;
+          }
+          
+          .footer-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              max-width: 1200px;
+              margin: 0 auto;
+          }
+          
+          .footer-logo img {
+              max-width: 150px;
+          }
+          
+          .footer-links, .footer-contact, .footer-social {
+              flex: 1;
+              margin: 0 20px;
+          }
+          
+          .footer-links h3, .footer-contact h3, .footer-social h3 {
+              margin-top: 0;
+              font-size: 16px;
+          }
+          
+          .footer-links ul {
+              list-style-type: none;
+              padding: 0;
+          }
+          
+          .footer-links ul li {
+              margin: 10px 0;
+          }
+          
+          .footer-links ul li a {
+              color: #fff;
+              text-decoration: none;
+              transition: color 0.3s;
+          }
+          
+          .footer-links ul li a:hover {
+              color: #f4a261;
+          }
+          
+          .footer-contact a {
+              color: #fff;
+              text-decoration: none;
+          }
+          
+          .footer-contact a:hover {
+              color: #f4a261;
+          }
+          
+          .footer-social a {
+              display: inline-block;
+              margin: 0 10px;
+          }
+          
+          .footer-social img {
+              width: 24px;
+              height: 24px;
+          }
+          
+          .footer-bottom {
+              text-align: center;
+              margin-top: 20px;
+              font-size: 12px;
+          }
+          
+          .footer-bottom p {
+              margin: 0;
+          }
+          </style>
+        <div class="footer-container">
+            
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="index.html">Tours</a></li>
+                    <li><a href="package.html">Packages</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="contact.html">Contact  Us</a></li>
+                    <li><a href="book.html">Book Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3 style="text-align: center;">Contact Us</h3>
+                <p>Email: <a href="mailto:info@sumareisen.com">info@sumareisen.com</a></p>
+                <p>Phone: +49 173 561 2690</p>
+                <p>Address:  Goldregenweg22, 51061Köln, Germany</p>
+            </div>
+            <div class="footer-social">
+                <h3 style="margin-left: 30px;">Follow Us</h3>
+                <a href="#" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2019 Tourism Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

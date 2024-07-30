@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style> * {
+        box-sizing: border-box;
+      }
+      
+      .row {
+        display: -ms-flexbox; /* IE 10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE 10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      
+      /* Create two equal columns that sits next to each other */
+      .column {
+        -ms-flex: 50%; /* IE 10 */
+        flex: 50%;
+        padding: 0 4px;
+      }
+      
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+      .row,iframe {
+  float: right;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+#emailForm {
+  float: right;
+  width: 100%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    button[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button[type=submit]:hover {
+      background-color: #28d730;
+    }
+    
+    #emailForm {
+      border-radius: 5px;
+      background-color: #FEB941;
+      padding: 20px;
+    }
+    @media screen and (max-width: 600px) {
+  #emailForm{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #email{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #emailForm{
+    width: 20%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #email,button[type=submit]{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+      </style>
+      <img src="rajas.png" style="width: 100%;">
+    <h1>HISTORICAL RAJASTHAN</h1>
+    <div class="row" style="width: 350px;height:100%;"> 
+      <div class="column">
+        <img src="02.jpg" style="width:100%">
+        <img src="03.png" style="width:100%">
+        <img src="04.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="05.jpg" style="width:100%">
+        <img src="06.jpg" style="width:100%;">
+        <img src="07.jpg" style="width:100%">
+       
+      </div>  
+     
+    </div>
+    
+    <p>
+
+    <iframe style="width: 350px;height: 500px;" src="https://www.google.com/maps/embed?pb=!1m72!1m8!1m3!1d14555801.169129448!2d74.16886!3d27.040832!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!3m2!1d28.7040592!2d77.10249019999999!4m5!1s0x39135ab1dc006611%3A0x3acebe2639825020!2sMandawa%2C%20Rajasthan%20333704!3m2!1d28.0487656!2d75.1508753!4m5!1s0x393fdd7bd90bbb89%3A0x4ce3121a7664816b!2sBikaner%2C%20Rajasthan!3m2!1d28.022934799999998!2d73.3119159!4m5!1s0x3947bc28aa1b396b%3A0xf5ef9bd660d66ee3!2sJaisalmer%2C%20Rajasthan%20345001!3m2!1d26.915748699999998!2d70.9083443!4m5!1s0x39418c4eaa06ccb9%3A0x8114ea5b0ae1abb8!2sJodhpur%2C%20Rajasthan!3m2!1d26.2389469!2d73.02430939999999!4m5!1s0x39681f64044cd397%3A0x14ec656b9ebf3b5c!2sRanakpur%2C%20Rajasthan%20306702!3m2!1d25.1160407!2d73.472527!4m5!1s0x3967e56550a14411%3A0xdbd8c28455b868b0!2sUdaipur%2C%20Rajasthan!3m2!1d24.585445!2d73.712479!4m5!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!3m2!1d26.9124336!2d75.7872709!4m5!1s0x39740d857c2f41d9%3A0x784aef38a9523b42!2sAgra%2C%20Uttar%20Pradesh!3m2!1d27.1766701!2d78.00807449999999!4m5!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!3m2!1d28.7040592!2d77.10249019999999!5e0!3m2!1sen!2sin!4v1720023963498!5m2!1sn!2sin" ></iframe>           
+   
+    
+    
+    <form id="emailForm" style="width: 350px;">
+      <h1 style="text-align: center;"><b>GET QUOTE</b></h1>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      
+      <button type="submit">Send Message</button>
+  </form>
+  
+  
+  
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+      // Initialize EmailJS with your user ID (replace with your actual user ID)
+      emailjs.init("L_m3hRAGzfjYp0cPS");
+      
+      // Handle form submission
+      document.getElementById('emailForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent default form submission
+          
+          // Collect form data
+          let form = event.target;
+          let formData = new FormData(form);
+          
+          // Send email using EmailJS
+          emailjs.send("service_8efabz6", "template_mh46i6m", {
+              from_name: formData.get('name'),
+              from_email: formData.get('email'),
+              message: formData.get('message')
+          }).then(function(response) {
+              alert('Email sent successfully!');
+              form.reset(); // Reset form after successful submission
+          }, function(error) {
+              alert('Error sending email: ' + error.text);
+          });
+      });
+  </script>
+  
+    
+   
+</p>
+</div>
+<footer>
+  <style>/* styles.css */
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo img {
+        max-width: 150px;
+    }
+    
+    .footer-links, .footer-contact, .footer-social {
+        flex: 1;
+        margin: 0 20px;
+    }
+    
+    .footer-links h3, .footer-contact h3, .footer-social h3 {
+        margin-top: 0;
+        font-size: 16px;
+    }
+    
+    .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+    
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-links ul li a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-contact a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-social a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+    }
+    </style>
+  <div class="footer-container">
+      
+      <div class="footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="index.html">Tours</a></li>
+            <li><a href="package.html">Packages</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="contact.html">Contact  Us</a></li>
+            <li><a href="book.html">Book Now</a></li>
+          </ul>
+      </div>
+      <div class="footer-contact">
+          <h3 style="text-align: center;">Contact Us</h3>
+          <p>Email: <a href="mailto:info@sumareisen.com">info@sumareisen.com</a></p>
+          <p>Phone: +49 173 561 2690</p>
+          <p>Address:  Goldregenweg22, 51061Köln, Germany</p>
+      </div>
+      <div class="footer-social">
+          <h3 style="margin-left: 30px;">Follow Us</h3>
+          <a href="#" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2019 Tourism Website. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

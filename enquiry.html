@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;width: 400px}
+        * {box-sizing: border-box;}
+        
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        button[type=submit] {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        
+        button[type=submit]:hover {
+          background-color: #28d730;
+        }
+        
+        #emailForm {
+          border-radius: 5px;
+          background-color: #FEB941;
+          padding: 20px;
+        }
+        @media screen and (max-width: 600px) {
+      #emailForm{
+        width: 50%;
+        margin-top: 0;
+      }
+    }
+    @media screen and (max-width: 600px) {
+      #email{
+        width: 50%;
+        margin-top: 0;
+      }
+    }
+    @media screen and (max-width: 200px) {
+      #emailForm{
+        width: 20%;
+        margin-top: 0;
+      }
+    }
+    @media screen and (max-width: 200px) {
+      #email,button[type=submit]{
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+    
+
+        </style>
+    <body>
+        <div class="backg">
+        <form id="emailForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required style="width: 100%;"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required style="width: 100%;"><br><br>
+            <div class="countrysel">
+                <label for="country">Country:</label>
+                <select id="country" name="country" style="width:200px ;">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                </select><br><br>
+                <label for="number">Contact Number:</label>
+                <input type="text" id="number" name="number" required ><br><br>
+            </div>
+            <label for="adult">Number of adults:</label>
+                <input type="text" id="adult" name="adult" required ><br><br>
+                <label for="childrens">Number of childrens:</label>
+                <input type="text" id="childrens" name="childrens" required ><br><br>
+               
+<label for="subject">Enquiry Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+        
+        
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            // Initialize EmailJS with your user ID (replace with your actual user ID)
+            emailjs.init("L_m3hRAGzfjYp0cPS");
+            
+            // Handle form submission
+            document.getElementById('emailForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form submission
+                
+                // Collect form data
+                let form = event.target;
+                let formData = new FormData(form);
+                
+                // Send email using EmailJS
+                emailjs.send("service_8efabz6", "template_mh46i6m", {
+                    from_name: formData.get('name'),
+                    from_email: formData.get('email'),
+                    from_country: formData.get('country'),
+                    from_number: formData.get('number'),
+                    from_adult: formData.get('adult'),
+                    from_childrens: formData.get('childrens'),
+                    from_subject: formData.get('subject'),
+                    message: formData.get('message')
+                }).then(function(response) {
+                    alert('Email sent successfully!');
+                    form.reset(); // Reset form after successful submission
+                }, function(error) {
+                    alert('Error sending email: ' + error.text);
+                });
+            });
+        </script>
+</body>
+</html>

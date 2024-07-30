@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="image1" href="image1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="video.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Destinations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Tourism Logo">
+            </div>
+            <nav>
+              <style>
+                .sidebar {
+                 height: 100%;
+                 width: 0;
+                 position: fixed;
+                 z-index: 1;
+                 top: 0;
+                 left: 0;
+                 background-color: #111;
+                 overflow-x: hidden;
+                 transition: 0.5s;
+                 padding-top: 60px;
+               }
+               
+               .sidebar a {
+                 padding: 8px 8px 8px 32px;
+                 text-decoration: none;
+                 font-size: 25px;
+                 color: #818181;
+                 display: block;
+                 transition: 0.3s;
+               }
+               
+               .sidebar a:hover {
+                 color: #f1f1f1;
+               }
+               
+               .sidebar .closebtn {
+                 position: absolute;
+                 top: 0;
+                 right: 25px;
+                 font-size: 36px;
+                 margin-left: 50px;
+               }
+               
+               .openbtn {
+                 font-size: 20px;
+                 cursor: pointer;
+                 background-color: #111;
+                 color: white;
+                 
+                 border: none;
+               }
+               
+               .openbtn:hover {
+                 background-color: #444;
+               }
+               
+               #main {
+                 transition: margin-left .5s;
+                 
+               }
+               
+               /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+               @media screen and (max-height: 450px) {
+                 .sidebar {padding-top: 15px;}
+                 .sidebar a {font-size: 18px;}
+               }
+               </style>
+               </head>
+               <body>
+               
+               <div id="mySidebar" class="sidebar">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                 
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="About.html">About</a></li>
+                 <li><a href="package.html">Packages</a></li>
+                 <li><a href="destination.html">Destinations</a></li>
+                 <li><a href="contact.html">Contact Us</a></li>
+                 <li><a href="book.html" class="book-now">Book Now</a></li>
+               </div>
+               
+               <div id="main">
+                 <button class="openbtn" onclick="openNav()">☰</button>  
+                     </div>
+               
+               <script>
+               function openNav() {
+                 document.getElementById("mySidebar").style.width = "250px";
+                 document.getElementById("main").style.marginLeft = "25px";
+               }
+               
+               function closeNav() {
+                 document.getElementById("mySidebar").style.width = "0";
+                 document.getElementById("main").style.marginLeft= "0";
+               }
+               </script>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="package.html">Packages</a></li>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="book.html" class="book-now">Book Now</a></li> </ul>
+            </nav>
+        </div>
+    </header>
+      
+                  </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <style>body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+  
+  header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+  }
+  
+  .logo img {
+      height: 50px; /* Adjust based on your logo size */
+  }
+  
+  nav {
+      display: flex;
+      align-items: center;
+  }
+  
+  .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+  
+  .nav-links li {
+      margin: 0 15px;
+  }
+  
+  .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+      color: #f0c040; /* Highlight color */
+  }
+  
+  .book-now {
+      background-color: #f0c040;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+  }
+  
+  .book-now:hover {
+      background-color: #e0b830;
+  }
+  
+  .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+      .nav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          background-color: #333;
+          padding: 10px;
+      }
+  
+      .nav-links.active {
+          display: flex;
+      }
+  
+      .nav-links li {
+          margin: 10px 0;
+      }
+  
+      .menu-toggle {
+          display: block;
+      }
+  }
+  
+  </style>
+  <script>document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+  
+    menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+  });</script>
+                      
+                      
+                   </ul>
+        </b>
+        
+       </header>
+    <style>/* styles.css */
+
+        /* Reset some default styles */
+        body, h1, h2, h3, p, ul {
+            margin: 0;
+        
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+           
+        }
+       
+        
+        .destinations-header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f4a261;
+            color: #fff;
+        }
+        
+        .destinations-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .destinations-header p {
+            font-size: 18px;
+        }
+        
+        .destinations-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .tour-card {
+            width: calc(33.333% - 20px);
+            margin: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            background: #fff;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .tour-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .tour-info {
+            padding: 15px;
+        }
+        
+        .tour-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .tour-info p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .learn-more {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .learn-more:hover {
+            background-color: #555;
+        }
+        
+        .tour-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 40px 20px;
+            font-size: 14px;
+        }
+        
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo img {
+            max-width: 150px;
+        }
+        
+        .footer-links, .footer-contact, .footer-social {
+            flex: 1;
+            margin: 0 20px;
+        }
+        
+        .footer-links h3, .footer-contact h3, .footer-social h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        .footer-links ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-social a {
+            margin-right: 10px;
+        }
+        
+        .footer-social img {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #222;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 1200px) {
+            .tour-card {
+                width: calc(50% - 20px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .tour-card {
+                width: calc(100% - 20px);
+            }
+        
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .footer-links, .footer-contact, .footer-social {
+                margin: 10px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .destinations-header h1 {
+                font-size: 28px;
+            }
+        
+            .destinations-header p {
+                font-size: 16px;
+            }
+        
+            .tour-info h2 {
+                font-size: 20px;
+            }
+        
+            .tour-info p {
+                font-size: 14px;
+            }
+        }
+        </style>
+    <main>
+        <section class="destinations-header">
+            <h1>Explore Our Destinations</h1>
+            <p>Discover breathtaking destinations and unique experiences tailored just for you. Explore our curated tours to some of the most amazing places!</p>
+        </section>
+
+        <section class="destinations-list">
+            <!-- Tour Cards -->
+            <div class="tour-card">
+                <img src="hawa.png" alt="Rajasthan Tour">
+                <div class="tour-info">
+                    <h2>Rajasthan Tour</h2>
+                    <p>Experience the regal splendor of Rajasthan with its majestic forts, palaces, and vibrant culture. Discover cities like Jaipur, Udaipur, and Jodhpur.</p>
+                    <a href="rajasthan.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="g6.avif" alt="Golden Triangle Tour">
+                <div class="tour-info">
+                    <h2>Golden Triangle Tour</h2>
+                    <p>Explore India's iconic Golden Triangle: Delhi, Agra, and Jaipur. Witness the majestic Taj Mahal, historic forts, and bustling markets.</p>
+                    <a href="golden.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="ke5.jpg" alt="Kerala Tour">
+                <div class="tour-info">
+                    <h2>Kerala Tour</h2>
+                    <p>Immerse yourself in the lush greenery, tranquil backwaters, and rich culture of Kerala. Enjoy houseboat cruises and scenic landscapes.</p>
+                    <a href="Kerala.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="w5.jpg" alt="Wildlife Tour">
+                <div class="tour-info">
+                    <h2>Wildlife Tour</h2>
+                    <p>Embark on an adventure through India's national parks and wildlife sanctuaries. Spot majestic tigers, elephants, and diverse flora and fauna.</p>
+                    <a href="wildlife.html"learn-more">Learn More</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="andaman.webp" alt="Andaman Island Tour">
+                <div class="tour-info">
+                    <h2>Andaman Island Tour</h2>
+                    <p>Discover the pristine beaches, crystal-clear waters, and coral reefs of the Andaman Islands. A perfect getaway for relaxation and adventure.</p>
+                    <a href="ayurveda.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="a4.jpg" alt="Ayurveda Kerala Tour">
+                <div class="tour-info">
+                    <h2>Ayurveda Kerala Tour</h2>
+                    <p>Experience the holistic healing of Ayurveda in Kerala. Enjoy rejuvenating treatments, wellness programs, and serene surroundings.</p>
+                    <a href="ayurveda.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <img src="ke1.jpg" alt="Footsteps of St. Thomas Tour">
+                <div class="tour-info">
+                    <h2>Footsteps of St. Thomas Tour</h2>
+                    <p>Follow the historical journey of St. Thomas in India. Explore ancient churches, religious sites, and experience the spiritual heritage.</p>
+                    <a href="footsteps.html" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <style>/* styles.css */
+
+          body {
+              margin: 0;
+              font-family: Arial, sans-serif;
+          }
+          
+          footer {
+              background-color: #000;
+              color: #fff;
+              padding: 40px 20px;
+              font-size: 14px;
+          }
+          
+          .footer-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              max-width: 1200px;
+              margin: 0 auto;
+          }
+          
+          .footer-logo img {
+              max-width: 150px;
+          }
+          
+          .footer-links, .footer-contact, .footer-social {
+              flex: 1;
+              margin: 0 20px;
+          }
+          
+          .footer-links h3, .footer-contact h3, .footer-social h3 {
+              margin-top: 0;
+              font-size: 16px;
+          }
+          
+          .footer-links ul {
+              list-style-type: none;
+              padding: 0;
+          }
+          
+          .footer-links ul li {
+              margin: 10px 0;
+          }
+          
+          .footer-links ul li a {
+              color: #fff;
+              text-decoration: none;
+              transition: color 0.3s;
+          }
+          
+          .footer-links ul li a:hover {
+              color: #f4a261;
+          }
+          
+          .footer-contact a {
+              color: #fff;
+              text-decoration: none;
+          }
+          
+          .footer-contact a:hover {
+              color: #f4a261;
+          }
+          
+          .footer-social a {
+              display: inline-block;
+              margin: 0 10px;
+          }
+          
+          .footer-social img {
+              width: 24px;
+              height: 24px;
+          }
+          
+          .footer-bottom {
+              text-align: center;
+              margin-top: 20px;
+              font-size: 12px;
+          }
+          
+          .footer-bottom p {
+              margin: 0;
+          }
+          </style>
+        <div class="footer-container">
+            
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="index.html">Tours</a></li>
+                    <li><a href="package.html">Packages</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="contact.html">Contact  Us</a></li>
+                    <li><a href="book.html">Book Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3 style="text-align: center;">Contact Us</h3>
+                <p>Email: <a href="mailto:info@sumareisen.com">info@sumareisen.com</a></p>
+                <p>Phone: +49 173 561 2690</p>
+                <p>Address:  Goldregenweg22, 51061Köln, Germany</p>
+            </div>
+            <div class="footer-social">
+                <h3 style="margin-left: 30px;">Follow Us</h3>
+                <a href="#" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2019 Tourism Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

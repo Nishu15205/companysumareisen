@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Tourism Logo">
+        </div>
+        <nav>
+          <style>
+            .sidebar {
+             height: 100%;
+             width: 0;
+             position: fixed;
+             z-index: 1;
+             top: 0;
+             left: 0;
+             background-color: #111;
+             overflow-x: hidden;
+             transition: 0.5s;
+             padding-top: 60px;
+           }
+           
+           .sidebar a {
+             padding: 8px 8px 8px 32px;
+             text-decoration: none;
+             font-size: 25px;
+             color: #818181;
+             display: block;
+             transition: 0.3s;
+           }
+           
+           .sidebar a:hover {
+             color: #f1f1f1;
+           }
+           
+           .sidebar .closebtn {
+             position: absolute;
+             top: 0;
+             right: 25px;
+             font-size: 36px;
+             margin-left: 50px;
+           }
+           
+           .openbtn {
+             font-size: 20px;
+             cursor: pointer;
+             background-color: #111;
+             color: white;
+             
+             border: none;
+           }
+           
+           .openbtn:hover {
+             background-color: #444;
+           }
+           
+           #main {
+             transition: margin-left .5s;
+             
+           }
+           
+           /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+           @media screen and (max-height: 450px) {
+             .sidebar {padding-top: 15px;}
+             .sidebar a {font-size: 18px;}
+           }
+           </style>
+           </head>
+           <body>
+           
+           <div id="mySidebar" class="sidebar">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+             
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="package.html">Packages</a></li>
+              <li><a href="destination.html">Destinations</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="book.html" class="book-now">Book Now</a></li>
+          
+           </div>
+           
+           <div id="main">
+             <button class="openbtn" onclick="openNav()">☰</button>  
+                 </div>
+           
+           <script>
+           function openNav() {
+             document.getElementById("mySidebar").style.width = "250px";
+             document.getElementById("main").style.marginLeft = "25px";
+           }
+           
+           function closeNav() {
+             document.getElementById("mySidebar").style.width = "0";
+             document.getElementById("main").style.marginLeft= "0";
+           }
+           </script>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="book.html" class="book-now">Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  
+              </li>
+            </ul>
+            
+        </nav>
+    </div>
+</header>
+<style>body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 50px; /* Adjust based on your logo size */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0c040; /* Highlight color */
+}
+
+.book-now {
+  background-color: #f0c040;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.book-now:hover {
+  background-color: #e0b830;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      padding: 10px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+
+</style>
+<script>document.addEventListener('DOMContentLoaded', function () {
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('active');
+});
+});</script>
+                  
+                  
+               </ul>
+    </b>
+    
+   </header>
+    <style> * {
+        box-sizing: border-box;
+      }
+      
+      .row {
+        display: -ms-flexbox; /* IE 10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE 10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      
+      /* Create two equal columns that sits next to each other */
+      .column {
+        -ms-flex: 50%; /* IE 10 */
+        flex: 50%;
+        padding: 0 4px;
+      }
+      
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+      .row,iframe {
+  float: right;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+#emailForm {
+  float: right;
+  width: 100%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    button[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button[type=submit]:hover {
+      background-color: #28d730;
+    }
+    
+    #emailForm {
+      border-radius: 5px;
+      background-color: #FEB941;
+      padding: 20px;
+    }
+    @media screen and (max-width: 600px) {
+  #emailForm{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #email{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #emailForm{
+    width: 20%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #email,button[type=submit]{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+      </style>
+      <img src="god.png" style="width: 100%;">
+    <h1>FOOTSTEPS OF St.THOMAS</h1>
+    <div class="row" style="width: 350px;height:100%;"> 
+      <div class="column">
+        <img src="ke1.jpg" style="width:100%">
+        <img src="ke2.jpg" style="width:100%">
+        <img src="ke3.avif" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="ke4.jpeg" style="width:100%">
+        <img src="ke5.jpg" style="width:100%;">
+        <img src="ke6.jpg" style="width:100%">
+       
+      </div>  
+     
+    </div>
+    <div class="para">
+    <p>
+      Following in the footsteps of St. Thomas in Kerala takes you on a spiritual journey through historic sites linked to the apostle’s mission in India. Tradition holds that St. Thomas arrived in Kerala in 52 AD, establishing some of the earliest Christian communities. Key locations include:
+<br>
+      <b>Kodungallur:</b> Where St. Thomas is believed to have first landed.<br>
+     <b> Palayur:</b> Home to one of the oldest churches he established.<br>
+      <b>Malayattoor:</b> A hilltop site where he prayed and performed miracles, now a major pilgrimage destination.<br>
+      <br>
+  These sites reflect St. Thomas’s profound impact on the region, blending history, faith, and culture in a unique spiritual experience.
+   <br>
+    <h2>Tour Schedule</h2>
+    
+<b>Day 01 Arrive Delhi</b><br>
+Upon arrival, after clearing immigration and custom, you will be met and transferred to your hotel. (Check-in at 1400hrs)
+<br>
+Overnight at hotel
+<br>
+<b>Day 02 Delhi</b><br>
+After breakfast, Full day city tour of Old & New Delhi<br>
+Old Delhi: An ancient walled city. Here you will drive past Red Fort. Raj Ghat, Jama Masjid and Chandni Chowk (Red Fort Closed on Mondays)
+Afternoon, visit New Delhi. Humayun’s Tomb, Qutab Minar Continue with a drive through Embassy area,<br> the Government buildings (1921-1930)
+<br>
+Overnight at hotel
+<br>
+<b>Day 03 Delhi / Agra 205 Kms / 5hrs approx</b><br>
+After the visit, continue your drive to Agra<br>
+Upon arrival, check in at your hotel.<br>
+<br>
+Afternoon, visit Taj Mahal and Agra Fort<br>
+Taj Mahal (Authority allow max 3hrs to visit Taj Mahal): (TAJ MAHAL CLOSED ON FRIDAYS)<br>
+<br>
+<iframe style="width: 350px;height: 500px;" src="https://www.google.com/maps/embed?pb=!1m66!1m8!1m3!1d30878491.78750733!2d76.500988!3d19.136276!3m2!1i1024!2i768!4f13.1!4m55!3e0!4m5!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!3m2!1d28.613929799999998!2d77.2088282!4m5!1s0x39740d857c2f41d9%3A0x784aef38a9523b42!2sAgra%2C%20Uttar%20Pradesh!3m2!1d27.1766701!2d78.00807449999999!4m5!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!3m2!1d26.9124336!2d75.7872709!4m5!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!3m2!1d12.9715987!2d77.5945627!4m5!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!3m2!1d9.9312328!2d76.26730409999999!4m5!1s0x3b0799794d099a6d%3A0x63250e5553c7e0c!2sMunnar%2C%20Kerala%20685612!3m2!1d10.088933299999999!2d77.05952479999999!4m5!1s0x3b06f8812df2a199%3A0x468af17958c54ae8!2sThekkady%2C%20Kumily%2C%20Kerala!3m2!1d9.6031088!2d77.161458!4m5!1s0x3b0881caaef0a8f7%3A0xc23075c3529e921!2sKumarakom%2C%20Kerala!3m2!1d9.6175449!2d76.430095!4m5!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!3m2!1d9.9312328!2d76.26730409999999!5e0!3m2!1sen!2sin!4v1722169566641!5m2!1sen!2sin" ></iframe>
+Agra Fort and City<br>
+Overnight at hotel<br>
+<br>
+<b>Day 04 Agra / Fatehpur Sikri /Jaipur 235Kms/5hrs 30mins</b><br>
+After breakfast, drive to Jaipur en-route visit Fatehpur Sikri: (the City of Victory) for a tour of this magnificent and world heritage buildings, which are still in a state of perfect preservation.
+<br>
+After the visit, continue your drive to Jaipur.<br>
+Upon arrival, check in at your hotel.<br>
+<br>
+Overnight at hotel
+<br>
+<b>Day 05 Jaipur</b><br>
+After breakfast, visit Amber Fort, the former capital of the royal Rajputs..
+<br>
+Afternoon, visit Jaipur City: Hawa Mahal or Palace of the Winds, We proceed for a guided tour of the City Palace & Observatory. Next stop at the City Palace is the Solar Observatory.
+<br>
+Overnight at hotel
+<br>
+<b>Day 06 Jaipur / Bangalore 6E 498 1210hrs /1440hrs</b><br>
+Bangalore / Cochin 6E 6145 1815hrs /1920hrs<br>
+<br>
+After breakfast, transfer to connect your flight for Cochin via Bangalore<br>
+Upon arrival you will met and transfer to your hotel<br>
+Upon arrival check in to your hotel<br>
+<br>
+Overnight at hotel<br>
+
+<b> Day 07 Cochin / Malayattoor / Trissur/ Kodungallur / Cochin 109Kms / 3hrs one way</b><br>
+ After breakfast Excursion Malayattoor.<br>
+ Malayattoor Church is famous all over the world and thus has been recognized as an international pilgrimage station.<br> The faithful pilgrims undertake rigorous fasting and carry wooden crosses while undertaking the pilgrimage.
+ <br>
+ It is believed that St. Thomas an apostle of Jesus had come to this place to spread the Gospel.<br>
+ <br>Visit St. Thomas Syro-Malabar Catholic Church at Palayur, Guruvayur The church here was built here in the year of 52 AD,<br> by Thomas the Apostle when he came to visit the Jewish merchants at Palayur which was a stronghold of Brahmins and Jews.
+ <br>Historical legend records that when St. Thomas landed at Palayur, he witnessed the sight of Hindu Brahmins at the Thaliyakulam<br> adjacent to the Palayur temple. Offering prayers by chanting mantras to god in <br>the form of Tharpanam to the Sun god. He performed this miracle and with this miracle <br>he converted a number of Brahmins and Jews in Palayur to Christianity.
+ 
+ Our next visit is to Marthoma Church, Azhikode ( Kodungallur ) <br>The church is considered to be the first one to be built by St. Thomas<br> after his arrival to Kodungallur in 52 AD. The church houses the right arm<br> bone of St. Thomas which was brought from Ortona in Italy.
+ <br>
+ Continental LUNCH at Chilli Out Café at Cherai Beach.
+ <br>
+ Later drive to Kottakavu Church, Paravoor situated in the heart of Paravoor. It is believed that the Persian Cross, which is preserved<br> in the chapel in front of the church, might have been engraved in rock in 880 AD..
+ <br>Just on a walking distance we can visit Kerala Jews History Museum. One of the oldest such Synagogues is the Paravoor<br> Synagogue.
+ <br>
+ <form id="emailForm" style="width: 350px;">
+  <h1 style="text-align: center;"><b>GET QUOTE</b></h1>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+  
+  <label for="message">Message:</label><br>
+  <textarea id="message" name="message" rows="4" required></textarea><br><br>
+  
+  <button type="submit">Send Message</button>
+</form>
+
+
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS with your user ID (replace with your actual user ID)
+  emailjs.init("L_m3hRAGzfjYp0cPS");
+  
+  // Handle form submission
+  document.getElementById('emailForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+      
+      // Collect form data
+      let form = event.target;
+      let formData = new FormData(form);
+      
+      // Send email using EmailJS
+      emailjs.send("service_8efabz6", "template_mh46i6m", {
+          from_name: formData.get('name'),
+          from_email: formData.get('email'),
+          message: formData.get('message')
+      }).then(function(response) {
+          alert('Email sent successfully!');
+          form.reset(); // Reset form after successful submission
+      }, function(error) {
+          alert('Error sending email: ' + error.text);
+      });
+  });
+</script>
+ After the visit return to Cochin
+ <br>
+ Evening witness of Kathakali Dance:<br>
+ A special treat awaits us this evening as we proceed to witness the strength and vigor of Kathakali dance drama,<br> as it enacts episodes from great Indian epics.
+ <br>Overnight at hotel
+ <br>
+<b> Day 08 Cochin / Munnar 140Kms / 5hrs.</b><br>
+ After Breakfast 09:00 am explore the Old part of KOCHI Fort Kochi is a peaceful seaside town in the south – western part of Kochi known for<br> its old world colonial charm. The place still holds every single cultural change it went through over the centuries.
+ <br>
+ Begin your exploration with a walking tour that takes you around Fort Kochi, the most historic part of Kochi. Your walking tour shows <br> you the Chinese Fishing nets are believed to have been introduced in Kochi by Chinese explorer Zheng He.
+ <br>St. Francis Church originally built in 1503 is the oldest European built church in India.<br>  The mortal remains of Vasco-da-Gama were buried here in 1525. It was taken to Lisbon after 14 years. This church has become a protected monument since 1923.
+ <br>
+ Explore Mattancherry by Tuk Tuk – The Jewish Quarter where you visit the historic Synagogue ( Closed on Friday afternoon and Saturday ),<br>  Built over 400 years ago it contains beautiful Belgian glass chandeliers and it paved with hand painted tiles from China.<br>  Walk through the narrow street between Pardesi Synagogue and The Dutch Palace.Visit The Dutch Palace (Closed on Fridays ) The Palace was built and gifted by the Portuguese as a present to the king of Cochin around 1545. The palace was built to appease the king after they plundered a temple nearby.
+ <br>
+ After visit drive to Munnar
+ <br>
+ On arrival Check In at Hotel. Munnar which is one of the most popular hill stations in india locates 5000ft above sea level <br> and situated at the confluence of three mountain streams Muthirapuzha, Nallathanni and Kundala.
+ <br>
+ Overnight at hotel
+ <br>
+ <b>Day 09 Munnar</b><br>
+ <br> After Breakfast proceeds for Eravikulam National Park is one of the most bio-diverse areas of India, the Park is now under<br>  the administration of Department of Forests and Wildlife. Best known as the natural habitat of Nilgiri Tahr.
+ 
+ <br>Tea Museum visit which belongs to TATA Company. Here they demonstrate the different stages of Tea processing and exhibits of<br>  Munnar from its discovery till today ( Tea Museum closed on Monday’s ).
+ <br>Afternoon, proceed for Srishti Welfare Centre visit ( Closed on Saturday afternoon, Sunday’s & Public Holidays ).
+ 
+ Back to the Hotel.
+ <br>
+ Overnight at hotel
+ <br>
+ <b>Day 10 Munnar / Periyar 96Kms / 3hrs</b><br>
+ After breakfast, drive to Periyar<br>
+ Upon arrival, check in to your hotel.<br>
+ 
+ Afternoon, proceed to Nature walk, Different nature trails traversing diverse habitats form the trekking routes,<br>  This is an interpretive programme offering excellent opportunity to watch birds, butterflies and other wildlife.
+ <br>
+ Overnight at hotel
+ <br>
+ <b>Day 11 Periyar / Kumarakom 140 Km/5hrs</b><br>
+ <br>After breakfast proceed to Kumarakom, Kumarakom is best known for its vast patches of palm trees, coconut groves and paddy fields <br> which offer mind-blowing scenery to spectators. Kumarakom is an ideal place for birdwatchers, the sanctuary is a seasonal<br>  home to a wide variety of migratory birds and Siberian Cranes can be spotted here once in a while.
+ <br>
+ Evening a Country Boat cruise – these boats are basically used by the local people for fishing and transporting and later developed as cruise boats.<br>  These boats can pass through the real narrow canals, enable us to show the life & life style of the village people much closer.
+ <br>
+ Overnight at hotel
+ <br>
+ <b>Day 12 Kumarakom Kumarakom (Day Cruise on Alleppey) 40Kms / 1hrs 30mins</b><br>
+ After breakfast proceed to Alleppey What makes Alleppey different from the rest of the tourist destinations are its House Boats.<br>  House Boats also known as “ Kettuvallam OR Cave Boat “ were earlier the only means of transport from these isolated villages to the cities nearby.<br>  One of the most memorable experiences for any traveller is the opportunity to take a boat journey on the backwaters of Kerala.
+ <br>
+ Enroute visit a Coir Factory – This is a factory run by laborers manually where you get to witness each step of making coir mats.
+ <br>
+ LUNCH will be served on board.
+ <br>
+ Evening disembark House Boat on the banks of Vembanad lake and drive back to Kumarakom.
+ <br>
+ Overnight at hotel
+ <br>
+ <b>Day 13 Kumarakom / Cochin 82Kms /3hr approx</b>
+ Leave Cochin
+ <br>
+ Morning drive to Kochi International airport to connect your flight back home.
+</p>
+</div></div>
+<footer>
+  <style>/* styles.css */
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    .para,h1{
+      margin-left: 15px;
+    }
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo img {
+        max-width: 150px;
+    }
+    
+    .footer-links, .footer-contact, .footer-social {
+        flex: 1;
+        margin: 0 20px;
+    }
+    
+    .footer-links h3, .footer-contact h3, .footer-social h3 {
+        margin-top: 0;
+        font-size: 16px;
+    }
+    
+    .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+    
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-links ul li a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-contact a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-social a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+    }
+    </style>
+  <div class="footer-container">
+      
+      <div class="footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="index.html">Tours</a></li>
+            <li><a href="package.html">Packages</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="contact.html">Contact  Us</a></li>
+            <li><a href="book.html">Book Now</a></li>
+          </ul>
+      </div>
+      <div class="footer-contact">
+          <h3 style="text-align: center;">Contact Us</h3>
+          <p>Email: <a href="mailto:info@sumareisen.com">info@sumareisen.com</a></p>
+          <p>Phone: +49 173 561 2690</p>
+          <p>Address:  Goldregenweg22, 51061Köln, Germany</p>
+      </div>
+      <div class="footer-social">
+          <h3 style="margin-left: 30px;">Follow Us</h3>
+          <a href="#" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2019 Tourism Website. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

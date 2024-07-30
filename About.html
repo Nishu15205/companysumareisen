@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="image1" href="image1.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="video.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Explore the World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Tourism Logo">
+            </div>
+            <nav>
+              <style>
+                .sidebar {
+                 height: 100%;
+                 width: 0;
+                 position: fixed;
+                 z-index: 1;
+                 top: 0;
+                 left: 0;
+                 background-color: #111;
+                 overflow-x: hidden;
+                 transition: 0.5s;
+                 padding-top: 60px;
+               }
+               
+               .sidebar a {
+                 padding: 8px 8px 8px 32px;
+                 text-decoration: none;
+                 font-size: 25px;
+                 color: #818181;
+                 display: block;
+                 transition: 0.3s;
+               }
+               
+               .sidebar a:hover {
+                 color: #f1f1f1;
+               }
+               
+               .sidebar .closebtn {
+                 position: absolute;
+                 top: 0;
+                 right: 25px;
+                 font-size: 36px;
+                 margin-left: 50px;
+               }
+               
+               .openbtn {
+                 font-size: 20px;
+                 cursor: pointer;
+                 background-color: #111;
+                 color: white;
+                 
+                 border: none;
+               }
+               
+               .openbtn:hover {
+                 background-color: #444;
+               }
+               
+               #main {
+                 transition: margin-left .5s;
+                 
+               }
+               
+               /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+               @media screen and (max-height: 450px) {
+                 .sidebar {padding-top: 15px;}
+                 .sidebar a {font-size: 18px;}
+               }
+               </style>
+               </head>
+               <body>
+               
+               <div id="mySidebar" class="sidebar">
+                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                 
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="About.html">About</a></li>
+                 <li><a href="package.html">Packages</a></li>
+                 <li><a href="destination.html">Destinations</a></li>
+                 <li><a href="contact.html">Contact Us</a></li>
+                 <li><a href="book.html" class="book-now">Book Now</a></li>
+               </div>
+               
+               <div id="main">
+                 <button class="openbtn" onclick="openNav()">☰</button>  
+                     </div>
+               
+               <script>
+               function openNav() {
+                 document.getElementById("mySidebar").style.width = "250px";
+                 document.getElementById("main").style.marginLeft = "25px";
+               }
+               
+               function closeNav() {
+                 document.getElementById("mySidebar").style.width = "0";
+                 document.getElementById("main").style.marginLeft= "0";
+               }
+               </script>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="package.html">Packages</a></li>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="book.html" class="book-now">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+      
+                  </li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+    <style>body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+  }
+  
+  header {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+  }
+  
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+  }
+  
+  .logo img {
+      height: 50px; /* Adjust based on your logo size */
+  }
+  
+  nav {
+      display: flex;
+      align-items: center;
+  }
+  
+  .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+  }
+  
+  .nav-links li {
+      margin: 0 15px;
+  }
+  
+  .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+      color: #f0c040; /* Highlight color */
+  }
+  
+  .book-now {
+      background-color: #f0c040;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+  }
+  
+  .book-now:hover {
+      background-color: #e0b830;
+  }
+  
+  .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+  }
+  
+  /* Media Query for Smaller Screens */
+  @media (max-width: 768px) {
+      .nav-links {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 60px;
+          left: 0;
+          background-color: #333;
+          padding: 10px;
+      }
+  
+      .nav-links.active {
+          display: flex;
+      }
+  
+      .nav-links li {
+          margin: 10px 0;
+      }
+  
+      .menu-toggle {
+          display: block;
+      }
+  }
+  
+  </style>
+  <script>document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+  
+    menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+  });</script>
+                      
+                      
+                   </ul>
+        </b>
+        
+       </header>
+<style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+   
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.hero-section {
+    background: url("g6.avif") no-repeat center center/cover;
+    color: rgb(32, 7, 7);
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+.about-section {
+    padding: 40px 20px;
+    background-color: white;
+    max-width: 1000px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.admin-profile {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+}
+
+.admin-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.admin-profile h3 {
+    margin: 10px 0;
+    font-size: 1.8em;
+}
+
+.admin-profile p {
+    font-size: 1em;
+    color: #555;
+}
+
+.company-overview {
+    flex: 2;
+}
+
+.company-overview h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #003366;
+}
+
+.company-overview p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+</style>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h2>Welcome to Explore the World</h2>
+                <b>Your gateway to unforgettable travel experiences.</b>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="about-container">
+                <div class="admin-profile">
+                    <img src="sumaa.png" alt="Admin Image" class="admin-img">
+                    <h3>35 Jahre
+                        Suma Reisen!</h3>
+                    <p><strong>Goldregenweg 22, 51061 Köln, Germany
+<br>
+                        Tel : 0049173 5612690
+                        <br>
+                        www.sumareisen.com</strong></p>
+                    <p>Ob Kultur-, Wellness- oder Badeurlaub — fuer die schonste Zeit des Jahres konnen Sie bei Suma Reisen unter vielen attraktiven Reisepaketen wahlen.
+<br>
+                        Indien ist ein Reiseland, das sehr facettenreich ist. Es lohnt sich, in jedem Fall, diese Vielfaltigkeit ken- nenzulernen. In unserem Reisekatalog finden Sie eine reichhaltige Auswahl interessanter Angebote sowie unsere Preisliste. Rufen Sie uns an und ver-
+                        einbaren Sie einen Gesprachstermin, bei dem wir gemeinsam Ihre personliche Traumreise zusam- menstellen.
+                       <br> 
+                        Mit unseren Erfahrungen und Kenntnissen rund urn das Thema „Indienreisen” stehen wir Ihnen als kompetenter Partner zur Seite. Sie mochten lhren Indienurlaub lieber individuell planen? Auch dann sind wir gerne fur Sie da – damit Ihre Reise in dieses faszinierende Land zu einem unvergess- lichen Erlebnis wird. Auch ein Besuch unserer Website www.sumareisen.com lohnt sich: Neben unserem gesamten Programm finden Sie hier auch
+                      <br>  nutzliche Tipps und Insider-Informationen. Mein Team und ich freuen uns auf Sie!
+                        <br>
+                        Ihr Thomas Pazhamannil</p>
+    </div>
+                <div class="company-overview">
+                    <h3>Our Mission</h3>
+                    <p>At Explore India, our mission is to unveil the enchanting beauty of India through curated travel experiences that celebrate its rich heritage and vibrant culture. We aim to offer journeys that immerse travelers in India's diverse traditions, stunning landscapes, and historical marvels.</p>
+                    <p>We are committed to showcasing the authentic essence of India, from the bustling markets of Delhi to the Golden Triangle Tour. Our goal is to provide immersive and meaningful travel experiences that connect you with the heart of India, while also supporting local communities and promoting sustainable tourism practices.</p>
+               </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <style>/* styles.css */
+
+          body {
+              margin: 0;
+              font-family: Arial, sans-serif;
+          }
+          
+          footer {
+              background-color: #000;
+              color: #fff;
+              padding: 40px 20px;
+              font-size: 14px;
+          }
+          
+          .footer-container {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              max-width: 1200px;
+              margin: 0 auto;
+          }
+          
+          .footer-logo img {
+              max-width: 150px;
+          }
+          
+          .footer-links, .footer-contact, .footer-social {
+              flex: 1;
+              margin: 0 20px;
+          }
+          
+          .footer-links h3, .footer-contact h3, .footer-social h3 {
+              margin-top: 0;
+              font-size: 16px;
+          }
+          
+          .footer-links ul {
+              list-style-type: none;
+              padding: 0;
+          }
+          
+          .footer-links ul li {
+              margin: 10px 0;
+          }
+          
+          .footer-links ul li a {
+              color: #fff;
+              text-decoration: none;
+              transition: color 0.3s;
+          }
+          
+          .footer-links ul li a:hover {
+              color: #f4a261;
+          }
+          
+          .footer-contact a {
+              color: #fff;
+              text-decoration: none;
+          }
+          
+          .footer-contact a:hover {
+              color: #f4a261;
+          }
+          
+          .footer-social a {
+              display: inline-block;
+              margin: 0 10px;
+          }
+          
+          .footer-social img {
+              width: 24px;
+              height: 24px;
+          }
+          
+          .footer-bottom {
+              text-align: center;
+              margin-top: 20px;
+              font-size: 12px;
+          }
+          
+          .footer-bottom p {
+              margin: 0;
+          }
+          </style>
+        <div class="footer-container">
+            
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="index.html">Tours</a></li>
+                    <li><a href="package.html">Packages</a></li>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="contact.html">Contact  Us</a></li>
+                    <li><a href="book.html">Book Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3 style="text-align: center;">Contact Us</h3>
+                <p>Email: <a href="mailto:info@sumareisen.com">info@sumareisen.com</a></p>
+                <p>Phone: +49 173 561 2690</p>
+                <p>Address:  Goldregenweg22, 51061Köln, Germany</p>
+            </div>
+            <div class="footer-social">
+                <h3 style="margin-left: 30px;">Follow Us</h3>
+                <a href="#" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2019 Tourism Website. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
