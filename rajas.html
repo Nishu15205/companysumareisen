@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Tourism Logo">
+        </div>
+        <nav>
+          <style>
+            .sidebar {
+             height: 100%;
+             width: 0;
+             position: fixed;
+             z-index: 1;
+             top: 0;
+             left: 0;
+             background-color: #111;
+             overflow-x: hidden;
+             transition: 0.5s;
+             padding-top: 60px;
+           }
+           
+           .sidebar a {
+             padding: 8px 8px 8px 32px;
+             text-decoration: none;
+             font-size: 25px;
+             color: #818181;
+             display: block;
+             transition: 0.3s;
+           }
+           
+           .sidebar a:hover {
+             color: #f1f1f1;
+           }
+           
+           .sidebar .closebtn {
+             position: absolute;
+             top: 0;
+             right: 25px;
+             font-size: 36px;
+             margin-left: 50px;
+           }
+           
+           .openbtn {
+             font-size: 20px;
+             cursor: pointer;
+             background-color: #111;
+             color: white;
+             
+             border: none;
+           }
+           
+           .openbtn:hover {
+             background-color: #444;
+           }
+           
+           #main {
+             transition: margin-left .5s;
+             
+           }
+           
+           /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+           @media screen and (max-height: 450px) {
+             .sidebar {padding-top: 15px;}
+             .sidebar a {font-size: 18px;}
+           }
+           </style>
+           </head>
+           <body>
+           
+           <div id="mySidebar" class="sidebar">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+             
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="package.html">Packages</a></li>
+              <li><a href="destination.html">Destinations</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="book.html" class="book-now">Book Now</a></li>
+          
+           </div>
+           
+           <div id="main">
+             <button class="openbtn" onclick="openNav()">☰</button>  
+                 </div>
+           
+           <script>
+           function openNav() {
+             document.getElementById("mySidebar").style.width = "250px";
+             document.getElementById("main").style.marginLeft = "25px";
+           }
+           
+           function closeNav() {
+             document.getElementById("mySidebar").style.width = "0";
+             document.getElementById("main").style.marginLeft= "0";
+           }
+           </script>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="book.html" class="book-now">Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  
+              </li>
+            </ul>
+            
+        </nav>
+    </div>
+</header>
+<style>body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 50px; /* Adjust based on your logo size */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0c040; /* Highlight color */
+}
+
+.book-now {
+  background-color: #f0c040;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.book-now:hover {
+  background-color: #e0b830;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      padding: 10px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+
+</style>
+<script>document.addEventListener('DOMContentLoaded', function () {
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('active');
+});
+});</script>
+                  
+                  
+               </ul>
+    </b>
+    
+   </header>
+    <style> * {
+        box-sizing: border-box;
+      }
+      .para,h1{
+      margin-left: 15px;
+    }
+      .row {
+        display: -ms-flexbox; /* IE 10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE 10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      
+      /* Create two equal columns that sits next to each other */
+      .column {
+        -ms-flex: 50%; /* IE 10 */
+        flex: 50%;
+        padding: 0 4px;
+      }
+      
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+      .row,iframe {
+  float: right;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+#emailForm {
+  float: right;
+  width: 100%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    button[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button[type=submit]:hover {
+      background-color: #28d730;
+    }
+    
+    #emailForm {
+      border-radius: 5px;
+      background-color: #FEB941;
+      padding: 20px;
+    }
+    @media screen and (max-width: 600px) {
+  #emailForm{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #email{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #emailForm{
+    width: 20%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #email,button[type=submit]{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+      </style>
+      <img src="rajas.png" style="width: 100%;">
+    <h1>HISTORICAL RAJASTHAN</h1>
+    <div class="row" style="width: 350px;height:100%;"> 
+      <div class="column">
+        <img src="02.jpg" style="width:100%">
+        <img src="03.png" style="width:100%">
+        <img src="04.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="05.jpg" style="width:100%">
+        <img src="06.jpg" style="width:100%;">
+        <img src="07.jpg" style="width:100%">
+       
+      </div>  
+     
+    </div>
+    <div class="para">
+    <p>Rajasthan, a land of vibrant colors and majestic forts, beckons travelers with its rich tapestry of history and culture. Embark on a journey through its desert landscapes, where golden sands stretch to the horizon and camels saunter along ancient trade routes. Explore the opulent palaces of Jaipur, with their intricate architecture and royal heritage, or lose yourself in the narrow lanes of Jaisalmer’s desert citadel. Witness the breathtaking beauty of Udaipur’s lakes and palaces, where romance and royalty intertwine. From the bustling markets of Jodhpur to the tranquil havens of Pushkar, every corner of Rajasthan offers a glimpse into India’s regal past and vibrant present.</p>
+<h2>
+    Tour Schedule
+</h2>
+<p>
+ <h3><b>Day 01 – Arrival</b></h3>
+    Upon arrival, after clearing immigration and custom, you will be met and transferred to your hotel.
+    <br>
+    Overnight at hotel
+    <br>
+    <h3><b> Day 02 – Delhi</b></h3>
+    Following breakfast, Full day city tour of Old & New Delhi
+    <br>
+    Old Delhi: An ancient walled city. Here you will drive past Red Fort, the most opulent Fort and Palace of the Mughal Empire: Raj Ghat, the memorial site of the Mahatma Gandhi; Jama Masjid, the largest mosque in India; and Chandni Chowk, the bustling<br>  and colourful market of the old city (Red Fort Closed on Mondays)
+    <br>
+    Afternoon, visit New Delhi. Our tour of New Delhi includes visits to such sights Humayun’s Tomb (1586): Built in the mid-16th century<br> by Haji Begum, wife of Humayun, the second Moghul emperor, this is an early example of Moghul architecture.
+    <br>
+    Visit the Qutab Minar 72 meters high and one of the most perfect towers in the Persian world. The Iron Pillar which has survived the<br> vagaries of weather for over 1500 years. Continue with a drive through Embassy area and the Government buildings (1921-1930)
+    <br>
+    Overnight at hotel
+    
+    <h3><b> Day 03 Delhi / Mandawa (260 Kms / 6hrs approx)</b></h3> 
+    Following breakfast, drive to Mandawa
+    <br>
+    Upon arrival, check in to your hotel
+    <br>
+    Evening Free at leisure
+    <br>
+    Overnight at hotel
+    <iframe style="width: 350px;height: 500px;" src="https://www.google.com/maps/embed?pb=!1m72!1m8!1m3!1d14555801.169129448!2d74.16886!3d27.040832!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!3m2!1d28.7040592!2d77.10249019999999!4m5!1s0x39135ab1dc006611%3A0x3acebe2639825020!2sMandawa%2C%20Rajasthan%20333704!3m2!1d28.0487656!2d75.1508753!4m5!1s0x393fdd7bd90bbb89%3A0x4ce3121a7664816b!2sBikaner%2C%20Rajasthan!3m2!1d28.022934799999998!2d73.3119159!4m5!1s0x3947bc28aa1b396b%3A0xf5ef9bd660d66ee3!2sJaisalmer%2C%20Rajasthan%20345001!3m2!1d26.915748699999998!2d70.9083443!4m5!1s0x39418c4eaa06ccb9%3A0x8114ea5b0ae1abb8!2sJodhpur%2C%20Rajasthan!3m2!1d26.2389469!2d73.02430939999999!4m5!1s0x39681f64044cd397%3A0x14ec656b9ebf3b5c!2sRanakpur%2C%20Rajasthan%20306702!3m2!1d25.1160407!2d73.472527!4m5!1s0x3967e56550a14411%3A0xdbd8c28455b868b0!2sUdaipur%2C%20Rajasthan!3m2!1d24.585445!2d73.712479!4m5!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!3m2!1d26.9124336!2d75.7872709!4m5!1s0x39740d857c2f41d9%3A0x784aef38a9523b42!2sAgra%2C%20Uttar%20Pradesh!3m2!1d27.1766701!2d78.00807449999999!4m5!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!3m2!1d28.7040592!2d77.10249019999999!5e0!3m2!1sen!2sin!4v1720023963498!5m2!1sn!2sin" ></iframe>           
+   
+    <h3><b> Day 04 Mandawa / Bikaner (190kms / 4hrs approx)</b></h3>
+    Mandawa: following Breakfast visit Mandawa A small town in the Shekhawati region of Rajasthan with a unique medieval charm.<br> The streets are lined with richly painted houses and each town is bustling with activity. Each home and small little castles are richly painted <br>with Shekhawati paintings known for its uniqueness and rich colours are still unimaginable that it could have been possible to exist<br> during those old days.
+    <br>
+    After visit drive to Bikaner
+    <br>
+    Upon arrival, check in to your hotel
+    <br>
+    Overnight at hotel
+   
+    <h3><b> Day 05 Bikaner / Jaisalmer (333kms / 7hrs approx)</b></h3>
+    Following breakfast visit Bikaner City – A desert fortified city on the ancient caravan routes that originated from Africa<br> and West Asia. The fort, founded by Raja Rai Singh, is distinguished by its long range of 37 pavilions, a line of balconies.<br>  It also has windows of varying designs which lend it a graceful dignity. An enormous archway leads to the Jormal temple in a spacious courtyard. Tar Mandir is the royal chapel where Royal weddings and births were once solemnized
+    <br>
+    After visit , drive to Jaisalmer.
+    <br>
+    Upon arrival, check in to your hotel.
+    <br>
+    Overnight at hotel
+    
+    Day 06 Jaisalmer
+    Following breakfast, visit Jaisalmer City: The citadel city built in the 12th century is an architectural dream in <br>yellow sandstone lying in the lonely silence of the Thar Desert, would provoke wonder, at what could have induced Jaisal, a Bhatti Prince,<br>  to settle right in the heart of a desolate desert. The forts and palaces and several superbly carved Jain temples in and around Jaisalmer are all reminiscent of a gloriously history. From the balconies jutting out from either side of the lanes, almost touch overhead. Patwon ki Haveli, Nathmalji ki Haveli are some of the notable mansions.
+    <br>
+    Afternoon, excursion to Sam Dunes.
+    <br>
+    Sam Desert: 40 kms from Jaisalmer are the Silver Gold Sand Dunes of Sam, as the sky is set on fire, and Rajasthani <br>musicians play haunting tunes, can be an unforgettable experience.
+    <br>
+    Overnight at hotel
+    
+    <form id="emailForm" style="width: 350px;">
+      <h1 style="text-align: center;"><b>GET QUOTE</b></h1>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      
+      <button type="submit">Send Message</button>
+  </form>
+  
+  
+  
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+      // Initialize EmailJS with your user ID (replace with your actual user ID)
+      emailjs.init("L_m3hRAGzfjYp0cPS");
+      
+      // Handle form submission
+      document.getElementById('emailForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent default form submission
+          
+          // Collect form data
+          let form = event.target;
+          let formData = new FormData(form);
+          
+          // Send email using EmailJS
+          emailjs.send("service_8efabz6", "template_mh46i6m", {
+              from_name: formData.get('name'),
+              from_email: formData.get('email'),
+              message: formData.get('message')
+          }).then(function(response) {
+              alert('Email sent successfully!');
+              form.reset(); // Reset form after successful submission
+          }, function(error) {
+              alert('Error sending email: ' + error.text);
+          });
+      });
+  </script>
+    <h3><b> Day 07 Jaisalmer / Jodhpur (280kms / 5hrs approx)</b></h3>
+    Following breakfast, drive to Jodhpur.
+    <br>
+    Upon arrival, check in to your hotel.
+    <br>
+    Afternoon, visit Jodhpur: The home of the Rathore rulers – the princely state of Rajasthan. A high 10 kms long stone<br> wall protects the well fortified city. Within, stands an imposing fort on a low range of sandstone hills, about 125mts.<br>  above the surrounding plains. Visit Mehrangarh Fort – founded in 1459 A.D. by Rao Jodha (After whom the city is named) the Fort is intricately adorned with long carved panels and latticed windows of exquisite designs in Red Sandstone. Also visit Jaswant Thada – an imposing white marble cenotaph built to commemorate the acts of bravery and generosity of the rulers in 19th century
+    <br>
+    Overnight at hotel
+    
+    <h3><b> Day 08 Jodhpur / Ranakpur/ Udaipur (200Kms / 4Hrs 30hrs approx)</b></h3>
+    After visit drive to Udaipur en-route visit Ranakpur
+    <br>
+    Visit Ranakpur: Famous for the quadruple Jain temple dedicated, like the temples at Mount Abu to Adinath.<br> The whole structure has 80 domes and is of 400 pillars.
+    <br>
+    After visit, continue your drive to Udaipur.
+    <br>
+    Upon arrival, check in to your hotel.
+    <br>
+    Overnight at hotel
+    
+    <h3><b> Day 09 Udaipur</b></h3>
+    Following breakfast, excursion to Eklingji and Nagda
+    <br>
+    Eklingji : 14 miles North-East of Udaipur is the village of Kailashpuri which is known for its 108 temples surrounded <br>by a high fortified wall, the whole complex is known as Sri Eklingji temple and has been a holy site associated<br>  with Lord Shiva since ancient times. The present structure however, dates from the 16th century.
+    <br>
+    Nagda: Close to Kailashpuri down a rough country road is believed to have been established by Nagaditya the<br> fourth Mewar king a descendant of the Guhadatta who was born in a cave in the Aravali Mountains. There are several temples <br> dating back to the fourth century A.D.
+    <br>
+    Afternoon, visit Udaipur City: In the midst of this romantic fate ridden land you come Udaipur, beautiful city of lakes,<br> palaces and fountain. In the shadows of dark green hills, Udaipur’s three lakes – Pichola, Fateh Sagar and Udai Sagar are shimmering jewels <br> from the opal surfaces of which rise fairytale white palaces. <br> Maharana Udai Singh sought shelter here from the Mughal hordes and then tarried to fashion a city out of the silent vale.<br>  Visit the City Palace Museum – grandeur and intricacy stroked all over in Granite,<br>  Marble and Mosaic displayed in the sparkling white filigreed balconies and windows,<br>  ornate arches and cupolas atop magnificent octagonal towers,<br>  Jagdish Temple – built in 1651 A.D. Also visit Sahelion Ki Bari – the spectacular garden<br>  displaying the unique life style of the royal ladies who once lived in the palace.
+    <br>
+    Overnight at hotel
+    
+<h3><b> Day 10 Udaipur / Jaipur (410kms / 6-7hrs approx)</b></h3>
+    Following breakfast, drive to Jaipur
+    <br>
+    Upon arrival, check in to your hotel.
+    <br>
+    Overnight at hotel
+    
+    <h3><b> Day 11 Jaipur</b></h3>
+    Following breakfast, visit Amber Fort, ascent to the fort on Elephant, the former capital of the royal Rajputs.<br> Few fail to be moved by the dramatic Rajputs grandeur of this hilltop fortress-palace 11-km north of Jaipur.<br>  Set on the dry wrinkled Aravali Hills, and surrounded by fortified battlements,<br>  the palace straddles two sepia-hued tundra hills overlooking Maota Lake,<br>  and its sprawling crenellated walls lattice the surrounding hills.<br>  We will ride up to this hilltop palace on a caparisoned,<br>  painted elephant, passing through the ancient main gate where Maharajas of Jaipur have entered for four hundred years.<br>  Our guide will elaborate on the history of this architectural masterpiece with its mirror-studded alcoves, <br> dazzling mosaics and water-cooled swings that delight today’s visitors as they did their former royal residents.
+    <br>
+</p>
+</div>
+</div>
+<footer>
+  <style>/* styles.css */
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo img {
+        max-width: 150px;
+    }
+    
+    .footer-links, .footer-contact, .footer-social {
+        flex: 1;
+        margin: 0 20px;
+    }
+    
+    .footer-links h3, .footer-contact h3, .footer-social h3 {
+        margin-top: 0;
+        font-size: 16px;
+    }
+    
+    .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+    
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-links ul li a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-contact a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-social a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+    }
+    </style>
+  <div class="footer-container">
+      
+      <div class="footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="index.html">Tours</a></li>
+            <li><a href="package.html">Packages</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="contact.html">Contact  Us</a></li>
+            <li><a href="book.html">Book Now</a></li>
+          </ul>
+      </div>
+      <div class="footer-contact">
+          <h3 style="text-align: center;">Contact Us</h3>
+          <p>Email: <a href="mailto:info@sumareisen.com">info@sumareisen.com</a></p>
+          <p>Phone: +49 173 561 2690</p>
+          <p>Address:  Goldregenweg22, 51061Köln, Germany</p>
+      </div>
+      <div class="footer-social">
+          <h3 style="margin-left: 30px;">Follow Us</h3>
+          <a href="#" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2019 Tourism Website. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

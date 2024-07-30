@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylehseet" href="slider.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;color: rgb(106, 14, 234);">
+        <b>
+          FLIGHT TICKET BOOKING
+        </b>
+      </h1>
+      <div class="slides">
+    
+        <div style="display: inline-block;" class="animate">
+          <div style="display: flex; align-items: center; justify-content: center; text-align:center ;margin-bottom: 50px;">
+          <div class="nish"><img src="britishairways_21686125301575_thumb.jpg" style="width:80%"></div>
+          <div class="nish"><img src="caribbean-airlines-7531b750-3caf-4454-af2c-83552a28689-resize-750.jpeg" style="width:80%"></div>
+          <div class="nish"><img src="American-Airlines-Logo.png" style="width:80%"></div>
+          </div>
+        </div>
+        
+        <div style="display: inline-block;" class="animate">
+          <div style="display: flex; align-items: center; justify-content: center; text-align:center ;">
+          <div class="nish"><img src="Air_India.svg.png" style="width:80%"></div>
+          <div class="nish"><img src="singapore airlines.png" style="width:80%"></div>
+          <div class="nish"><img src="emirates.png" style="width:80%;height:400px;width: 100%;"></div>
+          </div>
+        </div>
+        <div style="display: inline-block;" class="animate">
+          <div style="display: flex; align-items: center; justify-content: center; text-align:center ;">
+          <div class="nish"><img src="KLM_logo.svg.png" style="width:80%"></div>
+          <div class="nish"><img src="EgyptAir-Logo.png" style="width:80%;margin-left: 100px;"></div>
+          <div class="nish"><img src="britishairways_21686125301575_thumb.jpg" style="width:80%"></div>
+          </div>
+        </div>
+        
+        <a class="prevs" onclick="prev(-1)">❮</a>
+        <a class="nexts" onclick="next(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        
+        <div style="text-align:center">
+          <span class="dots" onclick="current(1)"></span> 
+          <span class="dots" onclick="current(2)"></span> 
+          <span class="dots" onclick="current(3)"></span>
+        </div>
+        <script src="slider.js"></script>
+</body>
+
+</html>

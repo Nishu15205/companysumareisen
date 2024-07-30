@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Tourism Logo">
+        </div>
+        <nav>
+          <style>
+            .sidebar {
+             height: 100%;
+             width: 0;
+             position: fixed;
+             z-index: 1;
+             top: 0;
+             left: 0;
+             background-color: #111;
+             overflow-x: hidden;
+             transition: 0.5s;
+             padding-top: 60px;
+           }
+           
+           .sidebar a {
+             padding: 8px 8px 8px 32px;
+             text-decoration: none;
+             font-size: 25px;
+             color: #818181;
+             display: block;
+             transition: 0.3s;
+           }
+           
+           .sidebar a:hover {
+             color: #f1f1f1;
+           }
+           
+           .sidebar .closebtn {
+             position: absolute;
+             top: 0;
+             right: 25px;
+             font-size: 36px;
+             margin-left: 50px;
+           }
+           
+           .openbtn {
+             font-size: 20px;
+             cursor: pointer;
+             background-color: #111;
+             color: white;
+             
+             border: none;
+           }
+           
+           .openbtn:hover {
+             background-color: #444;
+           }
+           
+           #main {
+             transition: margin-left .5s;
+             
+           }
+           
+           /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+           @media screen and (max-height: 450px) {
+             .sidebar {padding-top: 15px;}
+             .sidebar a {font-size: 18px;}
+           }
+           </style>
+           </head>
+           <body>
+           
+           <div id="mySidebar" class="sidebar">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+             
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="package.html">Packages</a></li>
+              <li><a href="destination.html">Destinations</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="book.html" class="book-now">Book Now</a></li>
+          
+           </div>
+           
+           <div id="main">
+             <button class="openbtn" onclick="openNav()">☰</button>  
+                 </div>
+           
+           <script>
+           function openNav() {
+             document.getElementById("mySidebar").style.width = "250px";
+             document.getElementById("main").style.marginLeft = "25px";
+           }
+           
+           function closeNav() {
+             document.getElementById("mySidebar").style.width = "0";
+             document.getElementById("main").style.marginLeft= "0";
+           }
+           </script>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="book.html" class="book-now">Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  
+              </li>
+            </ul>
+            
+        </nav>
+    </div>
+</header>
+<style>body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 50px; /* Adjust based on your logo size */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0c040; /* Highlight color */
+}
+
+.book-now {
+  background-color: #f0c040;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.book-now:hover {
+  background-color: #e0b830;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      padding: 10px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+.para,h1{
+      margin-left: 15px;
+    }
+
+</style>
+<script>document.addEventListener('DOMContentLoaded', function () {
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('active');
+});
+});</script>
+                  
+                  
+               </ul>
+    </b>
+    
+   </header>
+    <style> * {
+        box-sizing: border-box;
+      }
+      
+      .row {
+        display: -ms-flexbox; /* IE 10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE 10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      
+      /* Create two equal columns that sits next to each other */
+      .column {
+        -ms-flex: 50%; /* IE 10 */
+        flex: 50%;
+        padding: 0 4px;
+      }
+      
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+      .row,iframe {
+  float: right;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+#emailForm {
+  float: right;
+  width: 100%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    button[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button[type=submit]:hover {
+      background-color: #28d730;
+    }
+    
+    #emailForm {
+      border-radius: 5px;
+      background-color: #FEB941;
+      padding: 20px;
+    }
+    @media screen and (max-width: 600px) {
+  #emailForm{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #email{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #emailForm{
+    width: 20%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #email,button[type=submit]{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+      </style>
+      <img src="wildlifee.png" style="width: 100%;">
+    <h1>WILDLIFE TOUR</h1>
+    <div class="row" style="width: 350px;height:100%;"> 
+      <div class="column">
+        <img src="w1.jpg" style="width:100%">
+        <img src="w2.jpg" style="width:100%">
+        <img src="w3.jpg" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="w4.jpg" style="width:100%">
+        <img src="w5.jpg" style="width:100%;">
+        <img src="w6.jpg" style="width:100%">
+       
+      </div>  
+     
+    </div>
+    <div class="para">
+    <p>
+      India is a haven for wildlife enthusiasts, boasting a remarkable diversity of flora and fauna across its varied ecosystems. From the majestic Bengal tiger to the elusive snow leopard, India’s national parks and wildlife sanctuaries offer thrilling encounters with some of the world’s most iconic species. Embark on a safari adventure in the lush jungles of Jim Corbett National Park, home to a thriving population of tigers and elephants. Explore the untamed wilderness of Ranthambore National Park, where ancient ruins provide a dramatic backdrop to sightings of royal Bengal tigers. Discover the rich biodiversity of Kaziranga National Park, where one-horned rhinoceros roam amidst tall grasslands and wetlands. Whether it’s tracking elusive leopards in the forests of Kabini or witnessing the annual migration of Asiatic elephants in Bandipur, India’s wildlife promises awe-inspiring encounters and unforgettable experiences for nature lovers.
+
+    <h2>Tour Schedule</h2>
+<br>
+    <b>Day 01 Arrive Delhi</b>
+    Upon arrival, after clearing immigration and custom, you will be met and transferred to your hotel.
+    <br>
+    Overnight at hotel
+    <br>
+    <b>Day 02 Delhi</b>
+    Following breakfast, Full day city tour of Old & New Delhi
+    <br>
+    Old Delhi: An ancient walled city. Here you will drive past Red Fort, the most opulent Fort and Palace of the Mughal Empire: Raj Ghat, the memorial site of the Mahatma Gandhi; Jama Masjid, the largest mosque in India; and Chandni Chowk, the bustling and colourful market of the old city (Red Fort Closed on Mondays)
+    <br>
+    Afternoon,visit New Delhi. Our tour of New Delhi includes visits to such sights Humayun’s Tomb (1586): Built in the mid-16th century by Haji Begum, wife of Humayun, the second Moghul emperor, this is an early example of Moghul architecture.
+    <br>
+    <iframe style="width: 350px;height: 500px;" src="https://www.google.com/maps/embed?pb=!1m72!1m8!1m3!1d14942822.182096431!2d76.948117!3d23.884301!3m2!1i1024!2i768!4f13.1!4m61!3e0!4m5!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!3m2!1d28.613929799999998!2d77.2088282!4m5!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C%20Rajasthan!3m2!1d26.9124336!2d75.7872709!4m5!1s0x3971d8f668d65517%3A0x6eb9f78b60bac925!2sRanthambore%20National%20Park%2C%20Rajasthan!3m2!1d25.9775867!2d76.5532869!4m5!1s0x3973a30a845a736f%3A0x5a0f103593eece08!2sBharatpur%2C%20Rajasthan!3m2!1d27.2151863!2d77.5029996!4m5!1s0x39740d857c2f41d9%3A0x784aef38a9523b42!2sAgra%2C%20Uttar%20Pradesh!3m2!1d27.1766701!2d78.00807449999999!4m5!1s0x3982e5f63138c3c5%3A0xaa20ea639a4572c!2sKhajuraho%2C%20Madhya%20Pradesh%20471606!3m2!1d24.8318452!2d79.91985489999999!4m5!1s0x3986a5ee3c6959b7%3A0x600191e348ba2f44!2sBandhavgarh%20National%20Park%2C%20Tala%2C%20Madhya%20Pradesh%20484661!3m2!1d23.721515!2d81.0198784!4m5!1s0x3a2a085bc4dd23f3%3A0x59131aabc7236a4c!2sKanha%20Tiger%20Reserve%2C%20Madhya%20Pradesh!3m2!1d22.2994956!2d80.5864278!4m5!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!3m2!1d21.1458004!2d79.0881546!4m5!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!3m2!1d19.0759837!2d72.8776559!5e0!3m2!1sen!2sin!4v1721925623775!5m2!1sen!2sin" ></iframe>
+    Visit the Qutab Minar 72 meters high and one of the most perfect towers in the Persian world. The Iron Pillar which has survived the vagaries of weather for over 1500 years. Continue with a drive through Embassy area, the Government buildings (1921-1930
+    <br>
+    Overnight at hotel
+    <br>
+    <b>Day 03 Delhi / Jaipur 260Kms / 6hrs approx</b>
+    Following breakfast, drive to Jaipur
+    <br>
+    Upon arrival, check in to your hotel
+    <br>
+    Overnight at hotel
+    <br>
+    
+  
+  <b>Day 04 Jaipur</b>
+  Following breakfast, visit Amber Fort, ascent to the fort on Elephant, the former capital of the royal Rajputs. Few fail to be moved by the dramatic Rajputs grandeur of this hilltop fortress-palace 11-km north of Jaipur. Set on the dry wrinkled Aravali Hills, and surrounded by fortified battlements, the palace straddles two sepia-hued tundra hills overlooking Maota Lake, and its sprawling crenellated walls lattice the surrounding hills. We will ride up to this hilltop palace on a caparisoned, painted elephant, passing through the ancient main gate where Maharajas of Jaipur have entered for four hundred years. Our guide will elaborate on the history of this architectural masterpiece with its mirror-studded alcoves, dazzling mosaics and water-cooled swings that delight today’s visitors as they did their former royal residents.
+  <br>
+  Afternoon, visit Jaipur City: Hawa Mahal or Palace of the Winds, a five-storied structure of pink sandstone with semi-octagonal and delicately honeycombed windows overlooking the main street of the old city. It was built in 1799 so that veiled royal woman could look down unseen by the world through its 593 stone screens. We proceed for a guided tour of the City Palace & Observatory. The City Palace in the heart of the old city is a blend of Rajasthani and Mughal architecture. The center of the palace is a seven storied building called Chandra Palace, with fine views over the gardens and the city. Next top the City Palace is the Solar Observatory – an astronomical treasure house, with solar device that gives accurate predictions till date.
+  <br>
+  Overnight at hotel
+  <br>
+  <b>Day 05 Jaipur / Ranthambore (145Kms 4hrs approx)</b><br>
+  Following breakfast, drive to Ranthambore.
+  <br>
+  Upon arrival, check in to your hotel.
+  <br>
+  Enjoy evening jungle safaris in the Ranthambore National Park encompasses an area of 410 sq. km, which is home to a healthy population of tigers. It is situated 14 kms from Sawai Madhopur. The park is derives its name from the Ranthambore Fort situated within its precincts.<br>  The herbivorous population includes Chital, Sambar,<br>  Blue Bull and Chinkara, Sambar deer is the pride of the park.<br>  The tiger is the biggest attraction of the park.<br>  Other carnivores in the park include Leopard, Hyena, Jackal,<br>  Fox, Caracal, Jungle Cat and Ratel besides the Tiger a variety of game and avia fauna are also to be easily<br>  sighted in the reserve.
+  <br>
+  Overnight at hotel
+  <br>
+  <b>Day 06 Ranthambore</b><br>
+  Morning & evening, jungle safari in the Ranthambore National Park is known to have India’s Friendliest tigers Assured of protection,<br>  these nocturnal creatures are seen often in the day .Sprawled on the Aravalli and Vindhya ranges of Rajasthan ,<br>  Ranthambore National Park encompasses an area of 410 sq km in which live a healthy population of about 40 tigers.<br>  A large number of deer inhabit the area and leopards are occasionally sighted.<br>  The Pandam Taloa Lake, located adjacent to the Jogi Mahal hunting lodge, is the park’s <br> favorite water source. Smaller pools at Raj Bagh and Milak also<br>  attract a variety of wild life The best way to explore Ranthambore is in a jeep as the park<br>  is well connected by arterial roads and tracks . <br> Some of the popular sighting areas are Nal Ghati, Lahpur, Bakuala, Anantpur and the Kachida valley. Mammals: Tiger, Panther,<br>  Hyena, Jackal , Jungle Cat , Caracal , Sloth Bear , Sambar, Chital , Nilgai , Wild Boar, Chinkara, <br> Indian hare mongoose. Birds: Bonelli’s eagle, crested serpent eagle,<br>  great Indian horned owl, grey partridge sandgrouse, quail, spurfowl, common peafowl, <br> tree pie, paradise flycatcher, pheasant tailed jacana, painted stork, black stork, <br> spoonbill, green pigeon, ducks.
+  <br>
+  Overnight at hotel
+  <br>
+  <b>Day 07 Ranthambore / Bharatpur / Fatehpur Sikri / Agra</b><br>
+  Early morning transfer to railway station to connect train to Bharatpur
+  <br>
+  Upon arrival, drive to Agra en-route visit Fatehpur Sikri: (the City of Victory) for a tour of this magnificent and world heritage buildings,<br>  which are still in a state of perfect preservation. The city is divided into religious and secular sections.<br>  The profusion of sculpture is breathtaking.<br>  Also, the white marble mosque in the secular section is incredible.<br>  It is a very sacred mosque and pilgrims from far and near come here to pay their respects.
+  <br>
+  After visit, continue your drive to Agra.
+  <br>
+  Upon arrival, check in to your hotel.
+  <br>
+  Overnight at hotel
+  <br><form id="emailForm" style="width: 350px;">
+    <h1 style="text-align: center;"><b>GET QUOTE</b></h1>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    
+    <button type="submit">Send Message</button>
+</form>
+
+
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    // Initialize EmailJS with your user ID (replace with your actual user ID)
+    emailjs.init("L_m3hRAGzfjYp0cPS");
+    
+    // Handle form submission
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        
+        // Collect form data
+        let form = event.target;
+        let formData = new FormData(form);
+        
+        // Send email using EmailJS
+        emailjs.send("service_8efabz6", "template_mh46i6m", {
+            from_name: formData.get('name'),
+            from_email: formData.get('email'),
+            message: formData.get('message')
+        }).then(function(response) {
+            alert('Email sent successfully!');
+            form.reset(); // Reset form after successful submission
+        }, function(error) {
+            alert('Error sending email: ' + error.text);
+        });
+    });
+</script>
+  <b>Day 08 Agra</b><br>
+  Following breakfast, visit Taj Mahal and Agra Fort
+  <br>
+  Taj Mahal: Agra is the medieval city of the famous 17th century masterpiece Taj Mahal, which of course is the most splendid of all buildings – perhaps, <br> the most perfect architectural monument in the world. It was built in the memory of Mumtaz, the beloved wife of Shah Jehan, one of the greatest kings of the Mughal Empire. (TAJ MAHAL CLOSED ON FRIDAYS)
+  <br>
+  Agra City: Agra is not only famous for Taj Mahal but the impressive Mughal Red Fort known as the Agra Fort.<br>  This impressive red sandstone fort was built by Akbar between 1565-1573 A.D.<br>  Replete with gateways, pillared halls, mosques, marble trellises and geometric gardens; the Fort represents Mughal architecture at its peak.
+  <br>
+  Overnight at hotel
+  <br>
+  <b>Day 09 Khajuraho / Agra – Jhansi (Train)</b><br>
+  Jhansi / Orchha / Khajuraho 180Kms /4hrs approx<br>
+  Following breakfast, transfer to railway station to connect train to Jhansi.<br>
+  <br>
+  Upon arrival, you will be met and drive to Khajuraho en-route visit Orchha
+  <br>
+  visit Orchha: The Bundela chief Raja Rudra Pratap (1501-31) chose an easily defended and beautiful site for his capital.<br>  Set on the island on a bend in the Betwa River, <br> it is elevated above the surrounding wooded countryside. Once capital of its own state, Orchha contains three palaces The Jehangir Mahal: The most admired palace of Orchha’s, the Jehangir Mahal, was built by Bir Singh Deo. It was built as a present to welcome Mughal emperor Jehangir when he paid a state visit in the 17th century.
+  <br>
+  After visit continue drive to Khajuraho
+  <br>
+  Upon arrival check in to your hotel
+  <br>
+  Overnight at hotel
+  <br>
+  <b>Day 10 Khajuraho / Bandhavgarh (250Kms / 5Hrs approx)</b><br>
+  Following breakfast, visit Khajuraho City: The Eastern and Western Group Temples Founded in the 9th and 10th Century by the rulers of Chandela Dynasty,<br>  influenced by tantrism, in eroticism becomes a theme of philosophical interest and the aim is submlimation of sexual relationship<br>  in the sexual act or “Maithun”, women being regarded as the incarnation of the divine energy or “Shakti”.<br>  Itis also possible thatthe Khajuraho were influenced by “Kama Sutra”.<br>  Among the temples to visit is the Kandariya Mahadeo, Chaunsat Yogini,<br>  Chitragupta temple, adinath Temples ,Vishwanath temple, andvarious other temples.
+  <br>
+  After visit, drive to Bandhavgarh.
+  <br>
+  Upon arrival, check-in into your Hotel.
+  <br>
+  Overnight at hotel
+  <br>
+  <b>Day 11 Bandhavgarh</b><br>
+  Morning and Evening jungle safari in the Park.
+  <br>
+  Bandhavgarh: National Park the rich forests of Bandhavgarh served as Shikarghar for the Maharajas of Rewa.<br>  Bandhavgarh has been the centre of human activity for over 2000 years.<br>  Carnivorous species like the mighty tiger, elusive leopards, caracals,<br>  wild dogs anf jungle cats rule the forest with other species of herbivores like gaurs,<br>  sloth bears, macaques, various species of deer family like sambar, chital, muntjac,<br>  antelope species like nilgai, chinkara, chausingha and supported with scavenger species like jackal, hyenas etc.<br>  Around 150 species of resident birds including migratory birds like steppe eagle.
+  <br>
+  Overnight at hotel
+  <br>
+ <b> Day 12 Bandhavgarh / Kanha (265Kms / 06Hrs. approx)</b><br>
+  Morning and Evening jungle safari in the<br>
+  
+  Bandhavgarh National Park
+  <br>
+  After visit, drive to Kanha .
+  <br>
+  Upon arrival, check-in into your Hotel.
+  <br>
+  Overnight at hotel
+  <br>
+  <b>Day 13 Kanha</b><br>
+  Morning & Evening game viewing in Kanha National park.
+  <br>
+  Kanha Tiger Reserve, also called Kanha National Park, is one of the tiger reserves of India<br>  and the largest national park of Madhya Pradesh state in India.
+  <br>
+  In the 1930s, the present-day Kanha area was divided into two sanctuaries, Hallon and Banjar, <br> of 250 and 300 km² respectively. Kanha National Park was created on 1 June 1955<br>  and in 1973 was made the Kanha Tiger Reserve.<br>  Today it stretches over an area of 940 km² in the two districts Mandla and Balaghat.<br>  Together with a surrounding buffer zone of 1,067 km² and the neighboring 110 km² Phen Sanctuary it forms the Kanha Tiger Reserve. <br> This makes it the largest National Park in Central India. Kanha Tiger Reserve was ranked in the top 10 Famous Places for Tourists.
+  <br>
+  The park has a significant population of Royal Bengal tiger, Indian leopards, the sloth bear,<br>  Barasingha and Indian wild dog. The lush sal and bamboo forests,<br>  grassy meadows and ravines of Kanha provided inspiration to Rudyard Kipling for his famous novel Jungle Book
+  <br>
+  Overnight at hotel<br>
+  <b>Day 14 Kanha / Nagpur</b><br>
+  Nagpur / Mumbai (Flight)<br>
+  <br>
+  Morning, viewing in Kanha National park.
+  <br>
+  Later, drive to Nagpur airport for your flight to Mumbai.
+  <br>
+  Upon arrival check in to your hotel
+  <br>
+  Overnight at hotel<br>
+  <b>Day 15 Depart Mumbai</b><br>
+  Morning , transfer to international airport for your flight back home.   
+   
+</p>
+</div></div>
+<footer>
+  <style>/* styles.css */
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo img {
+        max-width: 150px;
+    }
+    
+    .footer-links, .footer-contact, .footer-social {
+        flex: 1;
+        margin: 0 20px;
+    }
+    
+    .footer-links h3, .footer-contact h3, .footer-social h3 {
+        margin-top: 0;
+        font-size: 16px;
+    }
+    
+    .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+    
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-links ul li a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-contact a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-social a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+    }
+    </style>
+  <div class="footer-container">
+      
+      <div class="footer-links">
+          <h3>Explore</h3>
+          <ul>
+              <li><a href="destination.html">Destinations</a></li>
+              <li><a href="index.html">Tours</a></li>
+              <li><a href="package.html">Packages</a></li>
+              <li><a href="About.html">About Us</a></li>
+              <li><a href="contact.html">Contact  Us</a></li>
+              <li><a href="book.html">Book Now</a></li>
+          </ul>
+      </div>
+      <div class="footer-contact">
+          <h3 style="text-align: center;">Contact Us</h3>
+          <p>Email: <a href="mailto:info@sumareisen.com">info@sumareisen.com</a></p>
+          <p>Phone: +49 173 561 2690</p>
+          <p>Address:  Goldregenweg22, 51061Köln, Germany</p>
+      </div>
+      <div class="footer-social">
+          <h3 style="margin-left: 30px;">Follow Us</h3>
+          <a href="#" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2019 Tourism Website. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>

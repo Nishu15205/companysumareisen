@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Tourism Logo">
+        </div>
+        <nav>
+          <style>
+            .sidebar {
+             height: 100%;
+             width: 0;
+             position: fixed;
+             z-index: 1;
+             top: 0;
+             left: 0;
+             background-color: #111;
+             overflow-x: hidden;
+             transition: 0.5s;
+             padding-top: 60px;
+           }
+           
+           .sidebar a {
+             padding: 8px 8px 8px 32px;
+             text-decoration: none;
+             font-size: 25px;
+             color: #818181;
+             display: block;
+             transition: 0.3s;
+           }
+           
+           .sidebar a:hover {
+             color: #f1f1f1;
+           }
+           
+           .sidebar .closebtn {
+             position: absolute;
+             top: 0;
+             right: 25px;
+             font-size: 36px;
+             margin-left: 50px;
+           }
+           
+           .openbtn {
+             font-size: 20px;
+             cursor: pointer;
+             background-color: #111;
+             color: white;
+             
+             border: none;
+           }
+           
+           .openbtn:hover {
+             background-color: #444;
+           }
+           
+           #main {
+             transition: margin-left .5s;
+             
+           }
+           
+           /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+           @media screen and (max-height: 450px) {
+             .sidebar {padding-top: 15px;}
+             .sidebar a {font-size: 18px;}
+           }
+           </style>
+           </head>
+           <body>
+           
+           <div id="mySidebar" class="sidebar">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+             
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About.html">About</a></li>
+              <li><a href="package.html">Packages</a></li>
+              <li><a href="destination.html">Destinations</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+              <li><a href="book.html" class="book-now">Book Now</a></li>
+          
+           </div>
+           
+           <div id="main">
+             <button class="openbtn" onclick="openNav()">☰</button>  
+                 </div>
+           
+           <script>
+           function openNav() {
+             document.getElementById("mySidebar").style.width = "250px";
+             document.getElementById("main").style.marginLeft = "25px";
+           }
+           
+           function closeNav() {
+             document.getElementById("mySidebar").style.width = "0";
+             document.getElementById("main").style.marginLeft= "0";
+           }
+           </script>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="package.html">Packages</a></li>
+                <li><a href="destination.html">Destinations</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="book.html" class="book-now">Book Now</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+  
+              </li>
+            </ul>
+            
+        </nav>
+    </div>
+</header>
+<style>body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo img {
+  height: 50px; /* Adjust based on your logo size */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f0c040; /* Highlight color */
+}
+
+.book-now {
+  background-color: #f0c040;
+  color: #333;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.book-now:hover {
+  background-color: #e0b830;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      padding: 10px;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+
+</style>
+<script>document.addEventListener('DOMContentLoaded', function () {
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('active');
+});
+});</script>
+                  
+                  
+               </ul>
+    </b>
+    
+   </header>
+    <style> * {
+        box-sizing: border-box;
+      }
+      .para,h1{
+      margin-left: 15px;
+    }
+      .row {
+        display: -ms-flexbox; /* IE 10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE 10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+      
+      /* Create two equal columns that sits next to each other */
+      .column {
+        -ms-flex: 50%; /* IE 10 */
+        flex: 50%;
+        padding: 0 4px;
+      }
+      
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+      .row,iframe {
+  float: right;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+#emailForm {
+  float: right;
+  width: 100%;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    button[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button[type=submit]:hover {
+      background-color: #28d730;
+    }
+    
+    #emailForm {
+      border-radius: 5px;
+      background-color: #FEB941;
+      padding: 20px;
+    }
+    @media screen and (max-width: 600px) {
+  #emailForm{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  #email{
+    width: 50%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #emailForm{
+    width: 20%;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 200px) {
+  #email,button[type=submit]{
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+      </style>
+      <img src="god.png" style="width: 100%;">
+    <h1>Kerala – God’s Own Country</h1>
+    <div class="row" style="width: 350px;height:100%;"> 
+      <div class="column">
+        <img src="ke1.jpg" style="width:100%">
+        <img src="ke2.jpg" style="width:100%">
+        <img src="ke3.avif" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="ke4.jpeg" style="width:100%">
+        <img src="ke5.jpg" style="width:100%;">
+        <img src="ke6.jpg" style="width:100%">
+       
+      </div>  
+     
+    </div>
+    <div class="para">
+    <p>
+      Kerala, aptly named “God’s Own Country,” is a tropical paradise in southwestern India. With serene backwaters, lush hill stations, and pristine beaches, it offers a diverse and enchanting travel experience. Explore historic Kochi, cruise the tranquil backwaters of Alleppey, and unwind amidst the misty tea plantations of Munnar. Indulge in Ayurvedic treatments, savor delectable cuisine, and witness vibrant cultural performances. From sun-kissed beaches to mist-clad mountains, Kerala captivates with its natural beauty and rich heritage, promising an unforgettable journey for every traveler.
+     <h3>Tour Schedule</h3> 
+<b>Day 01 Arrive Kochi</b>
+    <br>
+    Upon arrival, after clearing immigration and custom, you will be met and transferred to your hotel.
+    <br>
+    Overnight at hotel
+    <br>
+    <b>Day 02 Kochi</b>
+    
+    <br>
+    Following breakfast tour of Cochin City: With its wealth of historical associations, and its magnificent setting on a cluster of islands and narrow peninsulas,<br>  Cochin is one of the most fascinating cities of coastal South India. It is a city with indelible marks of Christianity, Islam, Hinduism and Jewish traditions.<br>  Of Special mention is the older parts of the Fort Cochin area. <br> It more or less exists as it used to be a 1000-year behind our times. <br> This part of the city reflects an unusual blend of medieval Portugal, Dutch and English country life grafted on to the tropical Malabar Coast.<br>  The 16th century Mattancherry Palace, also known as the Dutch Palace is a fascinating fort with elegant buildings and interesting collections <br> from the Royal traditions of the region.<br>  The unique feature of Cochin is the unexpected and isolated Jewish community,<br>  whose origins date back to AD 52.<br>  They are self-contained and have their own Synagogue.<br>  The area around the Synagogue, known as ‘Jew Town’ is one of the main centres of spice trade.<br>  Scores of small firms huddle together in old dilapidated buildings and the air is filled with the aroma of ginger,<br>  cardamom, cumin, turmeric and cloves. The area is very busy. <br> (Synagogue closed on Fridays & Saturdays)
+    <br>
+    Overnight at hotel
+    <br>
+    <iframe style="width: 350px;height: 500px;" src="https://www.google.com/maps/embed?pb=!1m58!1m12!1m3!1d2016258.5782247917!2d76.70020400000001!3d9.243847000000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m43!3e0!4m5!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!3m2!1d9.9312328!2d76.26730409999999!4m5!1s0x3b0799794d099a6d%3A0x63250e5553c7e0c!2sMunnar%2C%20Kerala%20685612!3m2!1d10.088933299999999!2d77.05952479999999!4m5!1s0x3b06f8812df2a199%3A0x468af17958c54ae8!2sThekkady%2C%20Kumily%2C%20Kerala!3m2!1d9.6031088!2d77.161458!4m5!1s0x3b0881caaef0a8f7%3A0xc23075c3529e921!2sKumarakom%2C%20Kerala!3m2!1d9.6175449!2d76.430095!4m5!1s0x3b0884f1aa296b61%3A0xb84764552c41f85a!2sAlappuzha%2C%20Kerala!3m2!1d9.498066699999999!2d76.3388484!4m5!1s0x3b05a5090a19ec65%3A0xb67f315bc0b762ac!2sKovalam%2C%20Kerala!3m2!1d8.3988128!2d76.9820149!4m5!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!3m2!1d8.5241391!2d76.9366376!5e0!3m2!1sen!2sin!4v1721401513694!5m2!1sen!2sin"></iframe>
+    
+    <b>Day 03 Kochi / Munnar (140kms / 3 hrs.30mins approx)</b>
+    Following breakfast, drive to Munnar
+    <br>
+    Upon arrival, check in to your hotel.
+    <br>
+    Afternoon free at leisure
+    <br>
+    Overnight at hotel
+    
+    
+    <br><br>
+   
+  <br>
+ <b>Day 04 Munnar</b>
+ Following breakfast, visit Munnar, which is surrounded by 30 tea gardens, the atmosphere is fragrant with extensive tea and cardamom plantations.<br>  Tea estates are situated mostly on the inner slopes of an elevated basin-like plateau. Estate elevations vary from about 1220 m to over 1830 m. some of the tea plantations, at an elevation of over 2135-m, are among the highest in the world. It would be worthwhile to visit some of these tea gardens to witness the plucking of leaves by women who carry conical bamboo baskets on their back and strapped to their forehead by a cloth band. The work on the field is all done by hand and is a fascinating sight. You may also visit the nearby Lockhart Gap, which provides a panoramic view of the valley and plantation down below. The enchanting high range of lakes and streams, the low-flying clouds and the mist-filled valleys cast a magical spell, which lingers long in the memory.
+ <br>
+ We would also be visiting the natural habitat of Nilgiri Tahr, a rare mountain goat and the Eravikulam National Park (Subject to open)
+ <br>
+ Overnight at hotel
+ <br><br>
+<b> Day 05 Munnar / Periyar (160kms / 4hrs approx)</b>
+ Following breakfast, drive to Periyar
+ <br>
+ Upon arrival, check in to your hotel.
+ <br>
+ Afternoon , proceed for Nature walk, Different nature trails traversing diverse habitats form the trekking routes, This is an interpretive programme offering excellent opportunity to watch birds, butterflies and other wildlife. The trails often pass through evergreen and moist deciduous forests interspersed with marshy grasslands. The Nature walk is the right programme to feel nature, hear her whispers and smell her flowers.
+ <br>
+ Overnight at hotel
+ <br><br>
+ <b>Day 06 Periyar / Kumarakom (140kms / 4hrs approx)</b>
+ Following breakfast, drive to Kumarakom
+ <br>
+ Upon arrival, check in to your hotel.
+ <br>
+ Optional: Afternoon, board Backwater Cruise (02 Hrs): Kerala Backwaters offers to take you on an exciting backwater cruise to Kumarakom in Kerala.<br>  A backwater cruise is the perfect way to enjoy your holidays to Kerala, as you can laze in the sun,<br>  go boating on the lovely Kerala backwaters or enjoy fishing on the tranquil waters.<br>  Backwater cruises on the traditional Kerala kettuvalloms on the glittering Kerala backwaters.<br>  Kumarakom was but a traditional Kerala fishing village that was later developed into the perfect holiday destination.<br>  In fact a lot of tourists visit this perfectly picturesque region with its natural greenery and relaxed atmosphere.<br>  In fact when you are on a leisure cruise on one of these backwaters you come in close contact with the way of life in the rice bowl of Kerala,<br>  India i.e. the Kuttanad region.<br>  The reflections of the crooked palm trees on the calm backwaters create a dream vision for you during your backwater cruise to Kerala.
+ <br>
+ Overnight at hotel
+ <br><br>
+ <form id="emailForm" style="width: 350px;">
+      <h1 style="text-align: center;"><b>GET QUOTE</b></h1>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      
+      <button type="submit">Send Message</button>
+  </form>
+  
+  
+  
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+      // Initialize EmailJS with your user ID (replace with your actual user ID)
+      emailjs.init("L_m3hRAGzfjYp0cPS");
+      
+      // Handle form submission
+      document.getElementById('emailForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent default form submission
+          
+          // Collect form data
+          let form = event.target;
+          let formData = new FormData(form);
+          
+          // Send email using EmailJS
+          emailjs.send("service_8efabz6", "template_mh46i6m", {
+              from_name: formData.get('name'),
+              from_email: formData.get('email'),
+              message: formData.get('message')
+          }).then(function(response) {
+              alert('Email sent successfully!');
+              form.reset(); // Reset form after successful submission
+          }, function(error) {
+              alert('Error sending email: ' + error.text);
+          });
+      });
+  </script>
+ <b> Day 07 Kumarakom / House Boat</b>
+ Following leisurely breakfast board the Houseboat (at 1200Noon) for a unique experience through the narrow canals and channels of the backwaters of Kerala. The material that go into the making of houseboat are all local and Eco-friendly; bamboo poles, coconut fiber ropes, bamboo mats car pets etc. The main wood used is “Anjali “. The Houseboat provides all comforts – Beds, a kitchen and western toilets. Traditional lanterns are used as lights. The cuisine is of traditional Kerala flavour along with the local Specialties – delicious fish and prawns. Cruising on a boat through remote tribal villages along the tranquil backwaters of Kerala is a superb experience. We explore the backwaters in your Houseboat .Sensational in its own silent way, the cruise takes you along snake boat docks, friendly cheering villagers, coir (Jute) making communities, toddy (local spirit) shops, fishing nets pitched for the day’s catch, bunded paddy fields and manual canoes of different sizes criss-crossing each other. The experience enables you to reach beautiful untouched areas
+ <br>
+ Overnight: House Boat
+ <br>
+ <b>Day 08 House Boat / Alleppey (Home Stay)</b>
+ Following breakfast, disembark at Alleppey and check in to Home Stay
+ <br>
+ In the beautiful waterways and backwater of the Kuttanad region of Central Kerala lies Emerald Isle, an exotic haven of tranquilly, seemingly remote from city life, yet barely 10 kilometers from Alleppey Town. Tucked away on this delightful island lies the Emerald Isle Heritage Villa, an ancestral Country House set in 9 acres of secluded grounds – your Retreat into a Paradise of Peace. Emerald Isle Heritage Home is situated in an island resplendent with exotic flora, breathtaking flowers, myriad birds and butterflies to make for a memorable holiday, affordable and unforgettable. A truly wonderful way to spend your time on the banks of the backwaters of Kerala!
+ <br>
+ Full day free at leisure
+ <br>
+ Overnight at hotel
+ <br><br>
+ <b>Day 09 Alleppey (Home Stay) / Kovalam (180Kms / 04hrs approx)</b>
+ Following breakfast, drive to Kovalam
+ <br>
+ Upon arrival, check in to your hotel
+ <br>
+ Rest of the day free for independent / beach activities
+ <br>
+ Overnight at hotel
+ <br><br>
+ <b>Day 10 Kovalam</b>
+ Day free for independent / beach activities
+ <br>
+ Overnight at hotel
+ <br><br>
+ <b>Day 11 Kovalam / Trivandrum (16Kms / 30 min approx)</b>
+ Depart Trivandrum
+ Morning transfer to Trivandrum international airport for your flight back home. 
+ <br> 
+   
+</p>
+</div>
+</div>
+<footer>
+  <style>/* styles.css */
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 40px 20px;
+        font-size: 14px;
+    }
+    
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .footer-logo img {
+        max-width: 150px;
+    }
+    
+    .footer-links, .footer-contact, .footer-social {
+        flex: 1;
+        margin: 0 20px;
+    }
+    
+    .footer-links h3, .footer-contact h3, .footer-social h3 {
+        margin-top: 0;
+        font-size: 16px;
+    }
+    
+    .footer-links ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-links ul li {
+        margin: 10px 0;
+    }
+    
+    .footer-links ul li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    
+    .footer-links ul li a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-contact a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .footer-contact a:hover {
+        color: #f4a261;
+    }
+    
+    .footer-social a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+    
+    .footer-social img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+    
+    .footer-bottom p {
+        margin: 0;
+    }
+    </style>
+  <div class="footer-container">
+      
+      <div class="footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="destination.html">Destinations</a></li>
+            <li><a href="index.html">Tours</a></li>
+            <li><a href="package.html">Packages</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="contact.html">Contact  Us</a></li>
+            <li><a href="book.html">Book Now</a></li>
+          </ul>
+      </div>
+      <div class="footer-contact">
+          <h3 style="text-align: center;">Contact Us</h3>
+          <p>Email: <a href="mailto:info@sumareisen.com">info@sumareisen.com</a></p>
+          <p>Phone: +49 173 561 2690</p>
+          <p>Address:  Goldregenweg22, 51061Köln, Germany</p>
+      </div>
+      <div class="footer-social">
+          <h3 style="margin-left: 30px;">Follow Us</h3>
+          <a href="#" style="color: white;"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" style="color: white;"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2019 Tourism Website. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
